@@ -1,4 +1,5 @@
 import { idGenerator } from '../utils/data-generator';
+import { validator } from '../utils/validations';
 
 class Item {
     constructor(name, price, category) {
@@ -13,6 +14,8 @@ class Item {
     }
 
     set name(value) {
+        validator.validateName(value);
+
         this._name = value;
     }
 
@@ -21,6 +24,8 @@ class Item {
     }
 
     set price(value) {
+        validator.validatePrice(value);
+
         this._price = value;
     }
 
@@ -29,6 +34,8 @@ class Item {
     }
 
     set category(value) {
+        validator.validateCategory(value);
+
         this._category = value;
     }
 }
