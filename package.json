@@ -1,0 +1,23 @@
+{
+  "name": "bookstore-x",
+  "version": "1.0.0",
+  "description": "Online bookstore",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/index.test.js -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kalito98/JavaScriptApplicationsXMen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kalito98/JavaScriptApplicationsXMen/issues"
+  },
+  "homepage": "https://github.com/Kalito98/JavaScriptApplicationsXMen#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
