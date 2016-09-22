@@ -77,11 +77,13 @@ class Physical extends Item {
         this.pages = pages;
     }
 
-    get author() {
+    get author() {         
         return this._name;
     }
 
     set author(author) {
+        validator.validateAuthor(author);
+
         this._author = author;
     }
 
@@ -90,6 +92,8 @@ class Physical extends Item {
     }
 
     set pages(pages) {
+        validator.validatePage(pages);
+
         this._pages = pages;
     }
 }
@@ -107,6 +111,8 @@ class Book extends Physical {
     }
 
     set cover(cover) {
+        validator.validateCover(cover);
+
         this._cover = cover;
     }
 
@@ -115,6 +121,8 @@ class Book extends Physical {
     }
 
     set summary(summary) {
+        validator.validateSummary(summary);
+
         this._summary = summary;
     }
 }
@@ -132,6 +140,8 @@ class Magazine extends Physical {
     }
 
     set theme(theme) {
+        validator.validateTheme(theme);
+
         this._theme = theme;
     }
 
@@ -157,6 +167,8 @@ class Comic extends Physical {
     }
 
     set superheroName(superheroName) {
+        validator.validateName(superheroName);
+
         this._superheroName = superheroName;
     }
 
@@ -165,6 +177,8 @@ class Comic extends Physical {
     }
 
     set publisher(publisher) {
+        validator.validatePublisher(publisher);
+
         this._publisher = publisher;
     }
 }
@@ -182,6 +196,8 @@ class DvD extends Digital {
     }
 
     set movieSummary(movieSummary) {
+        validator.validateSummary(movieSummary);
+
         this._movieSummary = movieSummary;
     }
 
@@ -190,6 +206,8 @@ class DvD extends Digital {
     }
 
     set yearOfPremiere(yearOfPremiere) {
+        validator.validateYear(yearOfPremiere);
+
         this._yearOfPremiere = value;
     }
 }
