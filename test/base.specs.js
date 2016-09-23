@@ -2,8 +2,7 @@ import {
     Item
 } from '../public/scripts/models/base-classes';
 
-let expect = require('chai').expect,
-    path = require('path');
+let expect = require('chai').expect;
 
 describe('Item', () => {
     describe('#id', () => {
@@ -13,13 +12,17 @@ describe('Item', () => {
             item = new Item("Name", 20, "Category");
         });
 
-        it('return the id', () => {
+        it('should return the id', () => {
             expect(item.id).to.not.equal(null);
         });
 
         it('should be a unique id', () => {
             let newItem = new Item("Book", 45, "Comedy");
             expect(item.id).to.not.equal(newItem.id);
+        });
+
+        it('cannot be null', () =>{
+            expect(item.id).to.not.equal(null);
         });
     });
 
@@ -30,7 +33,7 @@ describe('Item', () => {
             item = new Item("Name", 20, "Category");
         });
 
-        it('returns the name', () => {
+        it('should return the name', () => {
             expect(item.name).to.equal("Name");
         });
 
@@ -39,7 +42,7 @@ describe('Item', () => {
             expect(item.name).to.equal("New name")
         });
 
-        it('accepts only string', () => {
+        it('should accept only string', () => {
             expect(() => {
                 item.name = 42;
             }).to.throw(Error);
@@ -54,6 +57,9 @@ describe('Item', () => {
             }).to.throw(Error);
         });
 
+        it('cannot be null', () =>{
+            expect(item.name).to.not.equal(null);
+        });
     });
 
     describe('#price', () => {
@@ -63,7 +69,7 @@ describe('Item', () => {
             item = new Item("Name", 20, "Category");
         });
 
-        it('returns the price', () => {
+        it('should return the price', () => {
             expect(item.price).to.equal(20);
         });
 
@@ -72,17 +78,20 @@ describe('Item', () => {
             expect(item.price).to.equal(45);
         });
 
-        it('accepts only number', () => {
+        it('should accept only number', () => {
             expect(() => {
                 item.price = "bad price";
             }).to.throw(Error);
             expect(() => {
                 item.price = true;
             }).to.throw(Error);
+            expect(() => {
+                item.price = () => {};
+            }).to.throw(Error);
         });
 
         //So far it can be zero and the test doesnt pass.
-        
+
         // it('cannot be zero', () => {
         //     expect(() => {
         //         item.price = 0;
@@ -94,6 +103,10 @@ describe('Item', () => {
                 item.price = -23;
             }).to.throw(Error);
         });
+
+        it('cannot be null', () =>{
+            expect(item.price).to.not.equal(null);
+        });
     });
 
     describe('#category', () => {
@@ -103,7 +116,7 @@ describe('Item', () => {
             item = new Item("Name", 20, "Drama");
         });
 
-        it('returns the category', () => {
+        it('should return the category', () => {
             expect(item.category).to.equal("Drama");
         });
 
@@ -112,7 +125,7 @@ describe('Item', () => {
             expect(item.category).to.equal("Bollywood");
         });
 
-        it('accepts only string', () => {
+        it('should accept only string', () => {
             expect(() => {
                 item.category = 666;
             }).to.throw(Error);
