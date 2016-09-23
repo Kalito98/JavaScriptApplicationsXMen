@@ -101,6 +101,7 @@ class Physical extends Item {
 
 
 export {
+    Item,
     Digital,
     Physical
 }
