@@ -9,3 +9,12 @@
 - Class Comic that extends Physical with SuperheroName, Publisher
 - Class Dvd that extends Digital with MovieSummary, YearOfPremiere
 - Class Cd that extends Digital with Songs, SongsCount
+
+
+## TODO
+- Server for storing data
+- Templates for each data type
+- Basic UI
+- Module with request functions for getting data
+- Displaying the data
+- Tests
