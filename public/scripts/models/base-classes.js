@@ -77,7 +77,7 @@ class Physical extends Item {
         this.pages = pages;
     }
 
-    get author() {         
+    get author() {
         return this._name;
     }
 
@@ -134,7 +134,7 @@ class Magazine extends Physical {
         this.theme = theme;
         this.hasPresent = hasPresent;
     }
-    
+
     get theme() {
         return this._theme;
     }
@@ -235,4 +235,15 @@ class Cd extends Digital {
     set songsCount(songsCount) {
         this._songsCount = songsCount;
     }
+}
+
+export {
+    Item,
+    Digital,
+    Physical,
+    Book,
+    Magazine,
+    Comic,
+    DvD,
+    Cd
 }
