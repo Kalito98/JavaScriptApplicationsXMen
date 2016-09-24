@@ -1,3 +1,4 @@
+import { validator } from '../utils/validations';
 import { Physical, Digital } from './base-classes';
 
 class Book extends Physical {
