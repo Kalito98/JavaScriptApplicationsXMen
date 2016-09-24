@@ -13,7 +13,7 @@ const constants = {
         invalidCover: 'Cover must be Soft or Hard',
         invalidThemeType: 'Theme must be a string',
         invalidPublisherType: 'Publisher must be a string',
-        invalidYear: 'Year must be valid' 
+        invalidYear: 'Year must be valid'
     },
     propertiesConstants: {
         minimumPrice: 0,
@@ -61,8 +61,8 @@ function validateRating(rating) {
         throw new Error(constants.errorConstants.invalidNumberType);
     }
 
-    if (rating < constants.propertiesConstants.minimumPrice ||
-        constants.propertiesConstants.maximumRating) {
+    if (rating < constants.propertiesConstants.minimumRating ||
+        rating > constants.propertiesConstants.maximumRating) {
         throw new Error(constants.errorConstants.invalidRating);
     }
 }
@@ -78,7 +78,7 @@ function validateAuthor(author) {
         throw new Error(constants.errorConstants.invalidAuthorType);
     }
 
-    if (name.length === constants.propertiesConstants.invalidStringLength) {
+    if (author.length === constants.propertiesConstants.invalidStringLength) {
         throw new Error(constants.errorConstants.invalidStringLength);
     }
 }

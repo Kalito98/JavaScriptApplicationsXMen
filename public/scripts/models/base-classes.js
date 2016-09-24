@@ -78,7 +78,7 @@ class Physical extends Item {
     }
 
     get author() {
-        return this._name;
+        return this._author;
     }
 
     set author(author) {
