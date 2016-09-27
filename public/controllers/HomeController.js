@@ -1,7 +1,7 @@
-import htmlRenderer from 'public/views/helpers/htmlRenderer';
-import partialsHelper from 'public/views/helpers/partialsHelper';
+import htmlRenderer from 'views/helpers/htmlRenderer';
+import partialsHelper from 'views/helpers/partialsHelper';
 
-import itemsModel from 'public/models/itemsModel';
+import itemsModel from 'models/itemsModel';
 
 var HomeController = (function () {
     function index() {

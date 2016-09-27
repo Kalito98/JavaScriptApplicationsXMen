@@ -1,5 +1,5 @@
-import Item from 'public/models/viewModels/itemViewModel';
-import db from 'public/models/data/db';
+import Item from 'models/viewModels/itemViewModel';
+import db from 'models/data/db';
 
 var itemsModel = (function () {
         function add(name, price, category) {

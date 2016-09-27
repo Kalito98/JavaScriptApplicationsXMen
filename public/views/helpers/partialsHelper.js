@@ -1,7 +1,7 @@
 var partialsHelper = (function () {
     function getPartialViewTemplate(partialName) {
         var promise = new Promise(function (resolve, reject) {
-            $.get('public/views/partials/' + partialName + '.html')
+            $.get('views/partials/' + partialName + '.html')
                 .then(function (partial) {
                     resolve(partial);
                 }, function (err) {

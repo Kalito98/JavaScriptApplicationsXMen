@@ -1,4 +1,4 @@
-import appConfig from 'public/config/appConfig';
+import appConfig from 'config/appConfig';
 import 'parse';
 
 Parse.initialize(appConfig.parseConfig.applicationId, appConfig.parseConfig.javaScriptKey);

@@ -1,5 +1,5 @@
-import Comic from 'public/models/viewModels/comicViewModel';
-import db from 'public/models/data/db';
+import Comic from 'models/viewModels/comicViewModel';
+import db from 'models/data/db';
 
 var comicsModel = (function () {
         function add(name, price, category, author, pages, superheroName, publisher) {

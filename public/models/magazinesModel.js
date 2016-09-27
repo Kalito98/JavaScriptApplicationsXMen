@@ -1,5 +1,5 @@
-import Magazine from 'public/models/viewModels/magazineViewModel';
-import db from 'public/models/data/db';
+import Magazine from 'models/viewModels/magazineViewModel';
+import db from 'models/data/db';
 
 var MagazinesModel = (function () {
         function add(name, price, category, author, pages, theme, hasPresent) {

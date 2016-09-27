@@ -1,7 +1,7 @@
-import htmlRenderer from 'public/views/helpers/htmlRenderer';
-import partialsHelper from 'public/views/helpers/partialsHelper';
+import htmlRenderer from 'views/helpers/htmlRenderer';
+import partialsHelper from 'views/helpers/partialsHelper';
 
-import userModel from 'public/models/data/user';
+import userModel from 'models/data/user';
 
 var UsersController = (function () {
     function login() {

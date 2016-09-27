@@ -1,10 +1,10 @@
 import sammy from 'sammy';
 
-import ItemsController from 'public/controllers/ItemsController';
-import HomeController from 'public/controllers/HomeController';
-import UsersController from 'public/controllers/UsersController';
+import ItemsController from 'controllers/ItemsController';
+import HomeController from 'controllers/HomeController';
+import UsersController from 'controllers/UsersController';
 
-import user from 'public/models/data/user';
+import user from 'models/data/user';
 
 var app = new Sammy('#main', function () {
     this.get('#/', HomeController.index);

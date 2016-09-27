@@ -1,5 +1,5 @@
-import Book from 'public/models/viewModels/bookViewModel';
-import db from 'public/models/data/db';
+import Book from 'models/viewModels/bookViewModel';
+import db from 'models/data/db';
 
 var booksModel = (function () {
         function add(name, price, category, author, pages, cover, summary) {

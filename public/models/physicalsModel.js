@@ -1,5 +1,5 @@
-import Physical from 'public/models/viewModels/physicalViewModel';
-import db from 'public/models/data/db';
+import Physical from 'models/viewModels/physicalViewModel';
+import db from 'models/data/db';
 
 var physicalsModel = (function () {
         function add(name, price, category, author, pages) {

@@ -1,5 +1,5 @@
-import Dvd from 'public/models/viewModels/dvdViewModel';
-import db from 'public/models/data/db';
+import Dvd from 'models/viewModels/dvdViewModel';
+import db from 'models/data/db';
 
 var dvdsModel = (function () {
         function add(name, price, category, rating, duration, movieSummary, yearOfPremiere) {

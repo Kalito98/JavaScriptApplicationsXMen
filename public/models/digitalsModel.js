@@ -1,5 +1,5 @@
-import Digital from 'public/models/viewModels/digitalViewModel';
-import db from 'public/models/data/db';
+import Digital from 'models/viewModels/digitalViewModel';
+import db from 'models/data/db';
 
 var digitalsModel = (function () {
     function add(name, price, category, rating, duration) {
