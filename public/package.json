@@ -16,32 +16,22 @@
     "url": "https://github.com/Kalito98/JavaScriptApplicationsXMen/issues"
   },
   "homepage": "https://github.com/Kalito98/JavaScriptApplicationsXMen#readme",
-  "jspm": {
-    "directories": {},
-    "configFile": "public/config/config.js",
-    "devDependencies": {
-    // "babel": "npm:babel-core@^5.1.13",
+  "devDependencies": {
+    "babel": "^6.5.2",
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
     "babel-polyfill": "^6.13.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.14.0",
-    "babel-runtime": "npm:babel-runtime@^5.1.13",
     "chai": "^3.5.0",
-    "core-js": "npm:core-js@^0.9.4",
     "mocha": "^3.0.2"
   },
   "dependencies": {
     "babel-polyfill": "^6.13.0",
-    "bootstrap": "github:twbs/bootstrap@^3.3.5",
     "express": "^4.14.0",
-    "handlebars": "github:components/handlebars.js@^3.0.3",
-    "jquery": "github:components/jquery@^2.1.4",
-    "live-server": "npm:live-server@^0.8.1",
-    "parse": "github:albemuth/parse-js-sdk@^1.4.2",    
-    "path": "^0.12.7",
-    "sammy": "npm:sammy@^0.7.6"    
+    "http-server": "^0.9.0",
+    "path": "^0.12.7"
   },
   "babel": {
     "presets": [
