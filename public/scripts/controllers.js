@@ -1,0 +1,8 @@
+let controllers = {
+    home: () => {
+
+    },
+    products: () => {
+
+    }
+};

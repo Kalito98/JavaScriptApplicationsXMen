@@ -1,5 +1,5 @@
 function reqListener () {
-  console.log(this.responseText);
+  // console.log(this.responseText);
 }
 
 var oReq = new XMLHttpRequest();
