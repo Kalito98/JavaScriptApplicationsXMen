@@ -22,7 +22,7 @@ const constants = {
         maximumRating: 5,
         minimumDuration: 0,
         minimumPage: 0,
-        minimumSummary: 0,
+        minimumSummary: 15,
     }
 };
 
@@ -84,7 +84,7 @@ function validateAuthor(author) {
 }
 
 function validatePage(page) {
-    if (page <= constants.propertiesConstants.minimumPage) {
+    if (typeof page !== 'number' || page <= constants.propertiesConstants.minimumPage) {
         throw new Error(constants.errorConstants.invalidPage);
     }
 }
@@ -94,16 +94,18 @@ function validateSummary(summary) {
         throw new Error(constants.errorConstants.invalidSummaryType);
     }
 
-    if (summary.length === constants.propertiesConstants.minimumSummary) {
+    if (summary.length < constants.propertiesConstants.minimumSummary) {
         throw new Error(constants.errorConstants.invalidStringLength);
     }
 }
 
 function validateCover(cover) {
-    if (!(cover === 'Soft' || cover === 'soft' || cover === 'Hard' || cover === 'hard')) {
+    cover = cover.toLowerCase();
+    if (!(cover === 'soft' || cover === 'hard')) {
         throw new Error(constants.errorConstants.invalidCover);
     }
 }
+
 
 function validateTheme(theme) {
     if (typeof theme !== 'string') {

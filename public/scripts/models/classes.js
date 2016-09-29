@@ -16,7 +16,7 @@ class Book extends Physical {
     set cover(cover) {
         validator.validateCover(cover);
 
-        this._cover = cover;
+        this._cover = cover.toLowerCase();
     }
 
     get summary() {
@@ -111,7 +111,7 @@ class DvD extends Digital {
     set yearOfPremiere(yearOfPremiere) {
         validator.validateYear(yearOfPremiere);
 
-        this._yearOfPremiere = value;
+        this._yearOfPremiere = yearOfPremiere;
     }
 }
 

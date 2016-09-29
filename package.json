@@ -4,7 +4,7 @@
   "description": "Online bookstore",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register --require babel-polyfill test/base.specs.js"
+    "test": "mocha --compilers js:babel-core/register --require babel-polyfill --recursive test/"
   },
   "repository": {
     "type": "git",
