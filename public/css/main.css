@@ -9,6 +9,10 @@ body {
 #main {
     margin: 0 auto;
 }
+.media {
+    padding: 20px;
+    margin: 1.5%;
+}
 
 /*.login, .logout{
     display: none;
