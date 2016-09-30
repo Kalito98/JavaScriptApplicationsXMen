@@ -1,0 +1,50 @@
+{
+    "products": [
+        {
+            "dvds": [
+                {
+                    "id": 1,
+                    "name": "Dvd1",
+                    "price": 12,
+                    "category": "funny",
+                    "rating": 3,
+                    "duration": 122,
+                    "summary": "very much interesting",
+                    "premiereYear": 2012
+                },
+                {
+                    "id": 2,
+                    "name": "Dvd2",
+                    "price": 44,
+                    "category": "not funny",
+                    "rating": 1.5,
+                    "duration": 77,
+                    "summary": "very much not interesting",
+                    "premiereYear": 1966
+                }
+            ],
+            "cds": [
+                {
+                    "id": 3,
+                    "name": "Cd1",
+                    "price": 22,
+                    "category": "chalga",
+                    "rating": 1,
+                    "duration": 74,
+                    "summary": "very degrading",
+                    "premiereYear": 2001
+                },
+                {
+                    "id": 4,
+                    "name": "Cd2",
+                    "price": 14,
+                    "category": "rock",
+                    "rating": 4.8,
+                    "duration": 123,
+                    "summary": "ACDC",
+                    "premiereYear": 1975
+                }
+            ]
+        }
+    ]
+}
