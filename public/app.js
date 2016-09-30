@@ -16,9 +16,15 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.get('/', function(req, res, next) {
-    res.sendFile(path.join(__dirname, './', 'index.html'));
+app.get('/', function (req, res, next) {
+  res.sendFile(path.join(__dirname, './', 'index.html'));
 });
 
-app.listen(process.env.PORT || 3000);
+var connect = require('connect');
+var serveStatic = require('serve-static');
+connect().use(serveStatic(__dirname)).listen((process.env.PORT || 3000), function () {
+  console.log('Server running on 3000...');
+});
+
+// app.listen(process.env.PORT || 3000);
 console.log('Listening on port 3000!');
