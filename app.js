@@ -23,8 +23,12 @@ app.post("/api/users", usersController.post);
 app.put("/api/auth", usersController.put);
 
 let productsController = require("./controllers/products-controller")(db);
-app.get("/api/products", productsController.get);
-// app.post("/api/products", productsController.post);
+app.get("/api/products", productsController.getProducts);
+app.get("/api/products/dvds", productsController.getDvds);
+app.get("/api/products/cds", productsController.getCds);
+app.get("/api/products/magazines", productsController.getMagazines);
+app.get("/api/products/comics", productsController.getComics);
+app.get("/api/products/books", productsController.getBooks);
 
 let port = 3000;
 app.listen(port, () => console.log(`Server is running at http://localhost:${port}`));
