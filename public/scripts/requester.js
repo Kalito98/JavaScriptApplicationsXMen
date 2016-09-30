@@ -1,4 +1,16 @@
 let requester = {
+    get(url) {
+        let promise = new Promise((resolve, reject) => {
+            $.ajax({
+                url,
+                method: "GET",
+                success(response) {
+                    resolve(response);
+                }
+            });
+        });
+        return promise;
+    },
     putJSON: (url, body, options = {}) => {
         let promise = new Promise((resolve, reject) => {
             var headers = options.headers || {};
@@ -45,8 +57,4 @@ let requester = {
         });
         return promise;
     }
-};
-
-export {
-    requester
 };

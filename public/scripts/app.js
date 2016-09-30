@@ -1,7 +1,3 @@
-import {
-    controllers
-} from './controllers.js';
-
 let router = new Navigo(null, false);
 
 router

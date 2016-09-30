@@ -45,16 +45,70 @@
       }
     ],
     "books": [
-      {},
-      {}
+      {
+          "id": 5,
+          "name": "Book 1",
+          "price": 14,
+          "category": "rock",
+          "author": "brani",
+          "pages": 123,
+          "cover": "soft",
+          "summary": "very interesting book"
+      },
+      {
+          "id": 6,
+          "name":"Bodfdfok",
+          "price": 14,
+          "category": "rdfock",
+          "author": "branidfdf",
+          "pages": 123,
+          "cover": "soft",
+          "summary": "very interestdfing book"
+      }
     ],
     "magazines": [
-      {},
-      {}
+      {
+          "id": 7,
+          "name":"Bodfsdsdfok",
+          "price": 14,
+          "category": "rdfock",
+          "author": "branidfdf",
+          "pages": 123,
+          "theme": "soft",
+          "present": "yes"
+      },
+      {
+          "id": 8,
+          "name":"Fame",
+          "price": 14,
+          "category": "rdfock",
+          "author": "bsdrasdnidfdf",
+          "pages": 123,
+          "theme": "soft",
+          "present": "yes"
+      }
     ],
     "comics": [
-      {},
-      {}
+      {
+          "id": 9,
+          "name":"Spider man",
+          "price": 14,
+          "category": "rdfock",
+          "author": "bsdrasdnidfdf",
+          "pages": 123,
+          "superhero name": "soft",
+          "publisher": "marvel"
+      },
+      {
+          "id": 9,
+          "name":"Spider man 2",
+          "price": 14,
+          "category": "rdfock",
+          "author": "bsdrasdnidfdf",
+          "pages": 123,
+          "superhero name": "soft",
+          "publisher": "marvel"
+      }
     ],
     "posts": [],
     "user": {}

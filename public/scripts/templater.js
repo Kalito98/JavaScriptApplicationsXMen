@@ -1,10 +1,6 @@
 let templates = {
     get: function (templateName) {
-        let url = `./templates/${templateName}.html`;
+        let url = `./scripts/templates/${templateName}.handlebars`;
         return requester.get(url);
     }
-};
-
-export {
-    templates
 };
