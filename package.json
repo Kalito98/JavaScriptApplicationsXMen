@@ -4,7 +4,8 @@
   "description": "Online bookstore",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register --require babel-polyfill --recursive test/"
+    "test": "mocha --compilers js:babel-core/register --require babel-polyfill --recursive test/",
+    "start": "node ./public/app.js"
   },
   "repository": {
     "type": "git",
