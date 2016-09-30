@@ -1,8 +1,6 @@
-// To start the server you need three commands:
+// To start the server:
 //     $ npm install 
-//     $ node app.js
-//     $ http-server .
-
+//     $ npm start
 
 var express = require('express');
 var path = require('path');
