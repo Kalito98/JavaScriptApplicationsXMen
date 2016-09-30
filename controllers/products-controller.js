@@ -6,7 +6,52 @@ const _ = require("lodash");
 const DEFAULT_COOKIE_IMAGE = "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg";
 
 module.exports = function (db) {
-    function get(req, res) {
+    function getProducts(req, res) {
+        let products = db.get('products').value();
+        console.log(products);
+
+        res.send({
+            result: products
+        });
+    };
+
+    function getDvds(req, res) {
+        let products = db.get('products.dvds').value();
+        console.log(products);
+
+        res.send({
+            result: products
+        });
+    };
+
+    function getProducts(req, res) {
+        let products = db.get('products').value();
+        console.log(products);
+
+        res.send({
+            result: products
+        });
+    };
+
+    function getProducts(req, res) {
+        let products = db.get('products').value();
+        console.log(products);
+
+        res.send({
+            result: products
+        });
+    };
+
+    function getProducts(req, res) {
+        let products = db.get('products').value();
+        console.log(products);
+
+        res.send({
+            result: products
+        });
+    };
+
+    function getProducts(req, res) {
         let products = db.get('products').value();
         console.log(products);
 
