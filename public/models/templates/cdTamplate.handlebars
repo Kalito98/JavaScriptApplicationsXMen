@@ -1,0 +1,23 @@
+<div id="cds" class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">CDs</h3>
+    </div>
+    {{#each cthis}}
+        <div class="media">
+            <div class="media-left">
+                <img class="media-object" src="images/{{this.name}}.png">
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Title: {{this.name}}</h4>
+                <ul class="list-group">
+                    <li>Price: {{this.price}}</li>
+                    <li>Category: {{this.category}}</li>
+                    <li>Rating: {{this.rating}}</li>
+                    <li>Duration: {{this.duration}}</li>
+                    <li>Songs: {{this.songs}}</li>
+                    <li>Number of songs: {{this.songCount}}</li>
+                </ul>
+            </div>
+        </div>
+        {{/each}}
+</div>
