@@ -2,10 +2,7 @@
 "use strict";
 
 const _ = require("lodash");
-
-const DEFAULT_COOKIE_IMAGE = "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg";
-
-
+const idGenerator = require('../utils/id-generator');
 
 module.exports = function (db) {
     db.defaults({
@@ -13,6 +10,7 @@ module.exports = function (db) {
         })
         .value();
 
+    // Get
     function getProductsFromDB() {
         return db.get('products').value();
     }
@@ -66,16 +64,68 @@ module.exports = function (db) {
         });
     }
 
+    // Post
+    function postDvd(req, res) {
+        let dvd = req.body;
+        dvd.id = idGenerator.next().value;
+
+        getProductsFromDB()['dvds']
+            .push(dvd)
+            .value();
+    }
+
+    function postCd(req, res) {
+        let cd = req.body;
+        cd.id = idGenerator.next().value;
+
+        getProductsFromDB()['cds']
+            .push(cd)
+            .value();
+    }
+
+    function postMagazine(req, res) {
+        let magazine = req.body;
+        magazine.id = idGenerator.next().value;
+
+        getProductsFromDB()['magazines']
+            .push(magazine)
+            .value();
+    }
+
+    function postBook(req, res) {
+        let book = req.body;
+        book.id = idGenerator.next().value;
+
+        getProductsFromDB()['books']
+            .push(book)
+            .value();
+    }
+
+    function postComic(req, res) {
+        let comic = req.body;
+        comic.id = idGenerator.next().value;
+
+        getProductsFromDB()['comics']
+            .push(comic)
+            .value();
+    }
 
 
     return {
-        getProducts,
-        getDvds,
-        getCds,
-        getBooks,
-        getComics,
-        getMagazines
-        //     post,
-        //     put
+        get: {
+            getBooks,
+            getCds,
+            getComics,
+            getDvds,
+            getMagazines,
+            getProducts
+        },
+        post: {
+            postBook,
+            postCd,
+            postComic,
+            postDvd,
+            postMagazine
+        }
     };
 };
