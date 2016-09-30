@@ -3,9 +3,7 @@ import {
 } from '../common.js';
 let expect = common.expect;
 
-import {
-    Digital
-} from '../../public/scripts/models/base-classes';
+import Digital from '../../public/models/viewModels/digitalViewModel';
 
 describe('Digital', () => {
     let digital;

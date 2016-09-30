@@ -2,9 +2,7 @@ import {
     common
 } from '../common.js';
 
-import {
-    Cd
-} from '../../public/scripts/models/classes';
+import Cd from '../../public/models/viewModels/cdViewModel';
 
 let expect = common.expect;
 

@@ -1,8 +1,6 @@
 import { common } from '../common.js';
 
-import {
-    Physical
-} from '../../public/scripts/models/base-classes';
+import Physical from '../../public/models/viewModels/physicalViewModel';
 
 let expect = common.expect;
 

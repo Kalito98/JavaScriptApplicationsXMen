@@ -1,9 +1,7 @@
 import { common } from '../common.js';
 let expect = common.expect;
 
-import {
-    Item,
-} from '../../public/scripts/models/base-classes';
+import Item from '../../public/models/viewModels/itemViewModel';;
 
 
 describe('Item', () => {

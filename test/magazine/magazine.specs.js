@@ -2,9 +2,7 @@ import {
     common
 } from '../common.js';
 
-import {
-    Magazine
-} from '../../public/scripts/models/classes';
+import Magazine from '../../public/models/viewModels/magazineViewModel';
 
 let expect = common.expect;
 
