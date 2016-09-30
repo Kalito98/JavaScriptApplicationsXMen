@@ -1,15 +1,18 @@
-<!--  Latest compiled and minified Boootstrap CSS-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/footer.css">
-href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!doctype html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <title>E-Library</title>
+    <link rel="stylesheet" href="jspm_packages/github/twbs/bootstrap@3.3.5/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
-	<script>
+    <script>
         window.fbAsyncInit = function() {
             FB.init({
                 appId: '611224062350352',
@@ -17,6 +20,7 @@ href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.cs
                 version: 'v2.4'
             });
         };
+
         (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) {
@@ -28,86 +32,73 @@ href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.cs
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    
-  <!-- Fixed navbar -->
-  <header>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-            aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#/home">Awesome store</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#/products">Products</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Filters <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="dropdown-header">Physical</li>
-                <li><a href="#/products/books">Books</a></li>
-                <li><a href="#/products/magazines">Magazines</a></li>
-                <li><a href="#/products/comics">Comics</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Digital</li>
-                <li><a href="#/products/dvds">DVDs</a></li>
-                <li><a href="#/products/cds">CDs</a></li>
-              </ul>
-            </li>
-            <li><a href="#/about">Contact us</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <form id="search-form" class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                  <input id="search" type="text" class="form-control" placeholder="Search" required />
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Awesome store</a>
                 </div>
-                <button type="submit" class="btn btn-default"><a id="search-btn">Search</a></button>
-              </form>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about" >Products</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Filters <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#books">Books</a></li>
+                                <li><a href="#magazines">Magazines</a></li>
+                                <li><a href="#comics">Comics</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Digital</li>
+                                <li><a href="#dvds">DVDs</a></li>
+                                <li><a href="#cds">CDs</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#sale">Sale</a></li>
+                        <li><a href="#contact">Contact us</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <form id="search-form" class="navbar-form navbar-left" role="search">
+                                <div class="form-group">
+                                    <input id="search" type="text" class="form-control" placeholder="Search" required />
+                                </div>
+                                <button type="submit" class="btn btn-default"><a id="search-btn">Search</a></button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+    </header>
 
-            </li>
-          </ul>
-        </div>
-        <!--/.nav-collapse -->
-      </div>
-    </nav>
-  </header>
-  
-  <div class="fb-like" data-share="true" data-width="280" data-show-faces="true">
-    </div>
     <div id="loginControls">
         <ul class="list-inline">
-            <li><a href="#/register" class="btn btn-primary btn-sm login">Sign up</a></li>
-            <li><a href="#/login" class="btn btn-primary btn-sm login">Sign in</a></li>
+            <li><a href="#/register" class="btn btn-primary btn-sm hidden" id="login-btn">Sign up</a></li>
+            <li><a href="#/login" class="btn btn-primary btn-sm hidden" id="register-btn">Sign in</a></li>
             <li><span id="username"></span>
-                <button class="btn btn-primary btn-sm logout">Sign out</button>
+                <button class="btn btn-primary btn-sm hidden" id="logout-btn">Sign out</button>
             </li>
         </ul>
     </div>
     <div id="main">
-        
+
     </div>
-  
-  <!--<aside id="welcome_screen"></aside>-->
-  <footer>This is a <img src="images/xmen.png" height="30px" alt="X-Men" /> teamwork for JSApps 2016 Telerik Course
+    <footer>This is a <img src="images/xmen.png" height="30px" alt="X-Men" /> teamwork for JSApps 2016 Telerik Course
+
+    </footer>
     <div class="fb-like" data-share="true" data-width="280" data-show-faces="true">
     </div>
-  </footer>
-  <!-- Jquery minified -->
-  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="./scripts/controllers.js"></script>
-  <script src="./bower_components/navigo/lib/navigo.js"></script>
-  <script src="./scripts/router.js"></script>
-  <script src="./client.js"></script>
 
-  <!-- Latest compiled and minified Bootstrap JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
+
+    <script src="jspm_packages/github/components/jquery@2.1.4/jquery.js"></script>
     <script src="jspm_packages/github/twbs/bootstrap@3.3.5/js/bootstrap.js"></script>
     <script src="jspm_packages/system.js"></script>
     <script src="config/config.js"></script>
