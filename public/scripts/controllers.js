@@ -1,8 +1,0 @@
-let controllers = {
-    home: () => {
-
-    },
-    products: () => {
-
-    }
-};

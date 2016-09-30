@@ -42,7 +42,7 @@ var UsersController = (function () {
                 if(user){
                     $('#username').html("Hello " + user.username);
                     $('.logout').show();
-                    document.location.reload(true);
+                  //  document.location.reload(true);
                 } else {
                     $('.login').show();
                 }
@@ -60,7 +60,7 @@ var UsersController = (function () {
                 if(user){
                     $('#username').html("Hello " + user.username);
                     $('.logout').show();
-                    document.location.reload(true);
+                  //  document.location.reload(true);
                 } else {
                     $('.login').show();
                 }
