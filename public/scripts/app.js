@@ -2,6 +2,6 @@ let router = new Navigo(null, false);
 
 router
     .on(() => {
-        router.navigate("/home");
+        router.navigate("#/home");
     })
     .resolve();
