@@ -100,12 +100,10 @@ function validateSummary(summary) {
 }
 
 function validateCover(cover) {
-    cover = cover.toLowerCase();
-    if (!(cover === 'soft' || cover === 'hard')) {
+    if (!(cover === 'Soft' || cover === 'soft' || cover === 'Hard' || cover === 'hard')) {
         throw new Error(constants.errorConstants.invalidCover);
     }
 }
-
 
 function validateTheme(theme) {
     if (typeof theme !== 'string') {
