@@ -1,0 +1,28 @@
+.items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.item-container, .items-type {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(78, 172, 82, 0.7);
+}
+.item-container {
+    display: inline-block;
+    width: 400px;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+.items-type {
+    background-color: #4eadc6;
+}
+.item-properties {
+    list-style: none;
+    padding-left: 0;
+}
+h3, h2, h4 {
+    margin: 5px;
+    color: #ffffff;
+}
