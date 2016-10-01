@@ -109,8 +109,27 @@
         "superhero name": "Spider-man",
         "publisher": "marvel"
       }
-    ],
-    "users": []
+    ]
   },
-  "users": []
+  "users": [
+    {
+      "username": "pesho",
+      "passHash": "pesho",
+      "usernameToLower": "pesho",
+      "id": "16655985-e510-43d4-ad1c-2388c76d1ef6",
+      "authKey": "16655985-e510-43d4-ad1c-2388c76d1ef6FwHCPd*bP:.;Fu&:evl)RPGg"
+    },
+    {
+      "username": "asdasd",
+      "passHash": "asdasd",
+      "usernameToLower": "asdasd"
+    },
+    {
+      "username": "peshopesho",
+      "passHash": "pesho",
+      "usernameToLower": "peshopesho",
+      "id": 1,
+      "authKey": "1tVuTSLLLzoZURMBiUqgMKVUrPxBNmgMgTkYKcCiYuTqUveGVXPMAHreMyDB"
+    }
+  ]
 }

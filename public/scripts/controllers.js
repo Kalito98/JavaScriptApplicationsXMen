@@ -122,7 +122,7 @@ let controllers = {
                                 .then((respUser) => {
                                     $(document.body).addClass("logged-in");
                                     document.location = "#/home";
-                                });;
+                                });
 
                             ev.preventDefault();
                             return false;
@@ -142,6 +142,7 @@ let controllers = {
                                     $(document.body).addClass("logged-in");
                                     document.location = "#/home";
                                 });
+
                             ev.preventDefault();
                             return false;
                         });
