@@ -8,3 +8,52 @@
         text-align: center;
     }
 }
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 5px;
+}
+nav li {
+    float: left;
+}
+nav li a {
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.active {
+    background-color: #4eadc6;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.active a{
+  text-decoration: none;
+  color: #ffffff;
+}
+nav li a:hover {
+    background-color: #4CAF50;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+.title h2{
+  color: #4eadc6;
+  font-size: 36px;
+  text-shadow: 2px 2px 5px #333;
+}

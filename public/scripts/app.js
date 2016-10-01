@@ -17,3 +17,9 @@ router
 $('.btn-nav-logout').click(() => {
     controllers.logout();
 });
+
+$('.navigation').on('click', 'li', (ev) => {
+    let $target = $(ev.target);
+    $target.parents('nav').find('li').removeClass('active');
+    $target.parents('li').addClass('active');
+});
