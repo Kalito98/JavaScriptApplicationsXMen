@@ -67,7 +67,9 @@ module.exports = function (db) {
         let reqUser = req.body;
         let user = db.get("users")
             .value()
-            .find(x => x.usernameToLower === reqUser.usernameToLower);
+            .find(x => x.username === reqUser.username);
+
+        console.log(user);
 
         if (!user || user.passHash !== reqUser.passHash) {
             return res.status(404)
@@ -87,7 +89,8 @@ module.exports = function (db) {
         });
     }
 
-    return {get,
+    return {
+        get,
         post,
         put
     };

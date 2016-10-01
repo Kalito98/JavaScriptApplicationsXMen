@@ -9,7 +9,7 @@ let requester = {
                 }
             });
         });
-        
+
         return promise;
     },
     putJSON: (url, body, options = {}) => {
