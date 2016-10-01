@@ -49,21 +49,12 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="#/products">Products</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Filters <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-header">Physical</li>
-                                <li><a href="#/products/books">Books</a></li>
-                                <li><a href="#/products/magazines">Magazines</a></li>
-                                <li><a href="#/products/comics">Comics</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Digital</li>
-                                <li><a href="#/products/dvds">DVDs</a></li>
-                                <li><a href="#/products/cds">CDs</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#/contactUs">Contact us</a></li>
+                        <li><a href="#/products/books">Books</a></li>
+                        <li><a href="#/products/magazines">Magazines</a></li>
+                        <li><a href="#/products/comics">Comics</a></li>
+                        <li><a href="#/products/dvds">DVDs</a></li>
+                        <li><a href="#/products/cds">CDs</a></li>
+                        <li><a href="#/contact">Contact us</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
@@ -91,8 +82,9 @@
             </li>
         </ul>
     </div>
-    <div id="main">
 
+
+    <div id="main">
     </div>
 
     <!--<aside id="welcome_screen"></aside>-->
@@ -102,14 +94,25 @@
     <div class="fb-like" data-share="true" data-width="280" data-show-faces="true">
     </div>
 
-    <script src="jspm_packages/github/components/jquery@2.1.4/jquery.js"></script>
-    <script src="jspm_packages/github/twbs/bootstrap@3.3.5/js/bootstrap.js"></script>
-    <script src="jspm_packages/system.js"></script>
-    <script src="config/config.js"></script>
-    <script src="jspm_packages/github/albemuth/parse-js-sdk@1.4.2/lib/parse.js"></script>
-    <script>
-        System.import('main');
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./node_modules/handlebars/dist/handlebars.js"></script>
+
+    <script src="./node_modules/systemjs/dist/system.js"></script>
+    <script src="./node_modules/navigo/lib/navigo.js"></script>
+
+    <script src="./scripts/system-config.js">
     </script>
+    <script src="./scripts/requester.js">
+    </script>
+    <script src="./scripts/templater.js">
+    </script>
+    <script src="./scripts/data.js">
+    </script>
+    <script src="./scripts/controllers.js">
+    </script>
+
+
 </body>
 
 </html>

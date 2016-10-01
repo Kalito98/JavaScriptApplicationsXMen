@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --require babel-polyfill --recursive test/",
-    "start": "node ./public/app.js"
+    "start": "node ./app.js"
   },
   "repository": {
     "type": "git",
@@ -31,12 +31,17 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.13.0",
+    "body-parser": "^1.15.2",
     "connect": "^3.5.0",
+    "cors": "^2.8.1",
     "express": "^4.14.0",
+    "lodash": "^4.16.2",
+    "lowdb": "^0.13.1",
     "path": "^0.12.7",
     "serve-static": "^1.11.1",
     "systemjs": "^0.19.39",
-    "systemjs-plugin-babel": "0.0.15"
+    "systemjs-plugin-babel": "0.0.15",
+    "underscore-db": "^0.11.0"
   },
   "babel": {
     "presets": [

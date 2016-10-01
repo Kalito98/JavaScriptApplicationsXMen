@@ -1,12 +1,12 @@
 {
-  "name": "public",
-  "homepage": "https://github.com/Kalito98/JavaScriptApplicationsXMen",
+  "name": "bookstore-x",
+  "description": "Online bookstore",
+  "main": "index.js",
   "authors": [
     "Ivan <madritistaaa@gmail.com>"
   ],
-  "description": "",
-  "main": "",
-  "license": "MIT",
+  "license": "ISC",
+  "homepage": "https://github.com/Kalito98/JavaScriptApplicationsXMen",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,8 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "handlebars": "^4.0.5",
-    "jquery": "^3.1.1",
-    "navigo": "^3.0.0"
+    "bootstrap": "^3.3.7"
   }
 }

@@ -1,1 +1,0 @@
-module.exports = require("github:albemuth/parse-js-sdk@1.4.2/lib/parse");
