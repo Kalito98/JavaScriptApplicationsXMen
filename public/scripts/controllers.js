@@ -149,5 +149,11 @@ let controllers = {
 
                     });
             });
+    },
+    logout: () => {
+        dataService.logout()
+            .then(() => {
+                $(document.body).removeClass("logged-in");
+            });
     }
 };

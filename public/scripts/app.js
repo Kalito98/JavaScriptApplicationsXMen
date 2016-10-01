@@ -13,3 +13,7 @@ router
         router.navigate("#/home");
     })
     .resolve();
+
+$('.btn-nav-logout').click(() => {
+    controllers.logout();
+});
