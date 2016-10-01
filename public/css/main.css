@@ -30,7 +30,7 @@ body {
 }
 #landing-image-wrapper {
     margin-top: -150px;
-    width: 55%;
+    width: 70%;
     box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
     border-radius: 5px;
 
@@ -167,9 +167,9 @@ body {
     padding: 1%;
     background: #000000;
     height: 100vh;
-    width: 60%;
+    width: 80%;
     text-align: center;
-    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
+      box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
     border-radius: 5px;
 }
 #home-products>h2 {
@@ -211,12 +211,12 @@ body {
 #fixed-share-button {
     position: fixed;
     bottom: 60px;
-    left: 0;
+    right: 0;
 }
 #fixed-tweet-button {
     position: fixed;
     bottom: 20px;
-    left: 0;
+    right: 0;
 }
 #fixed-share-button>img {
     width: 35px;
