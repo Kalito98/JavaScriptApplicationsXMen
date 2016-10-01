@@ -7,6 +7,13 @@ let controllers = {
                 let templateFunc = handlebars.compile(templateHtml);
                 let html = templateFunc();
                 $("#main").html(html);
+
+                $("#down-btn").click(function() {
+                    console.log("clicked");
+                    $('html, body').animate({
+                        scrollTop: $("#home-products").offset().top - 100
+                    }, 1500);
+                });
             });
     },
     products: () => {
@@ -25,6 +32,8 @@ let controllers = {
                 let html = templateFunc(books.result);
 
                 $("#main").html(html);
+
+
             });
     },
     magazines: () => {
@@ -35,7 +44,7 @@ let controllers = {
 
                 return templates.get('magazines');
             })
-            .then((templateHtml) =>{
+            .then((templateHtml) => {
                 let templateFunc = handlebars.compile(templateHtml);
                 let html = templateFunc(magazines.result);
 
@@ -51,7 +60,7 @@ let controllers = {
 
                 return templates.get('comics');
             })
-            .then((templateHtml) =>{
+            .then((templateHtml) => {
                 let templateFunc = handlebars.compile(templateHtml);
                 let html = templateFunc(comics.result);
 
@@ -66,7 +75,7 @@ let controllers = {
 
                 return templates.get('cds');
             })
-            .then((templateHtml) =>{
+            .then((templateHtml) => {
                 let templateFunc = handlebars.compile(templateHtml);
                 let html = templateFunc(cds.result);
 
@@ -81,7 +90,7 @@ let controllers = {
 
                 return templates.get('cds');
             })
-            .then((templateHtml) =>{
+            .then((templateHtml) => {
                 let templateFunc = handlebars.compile(templateHtml);
                 let html = templateFunc(dvds.result);
 
