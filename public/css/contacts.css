@@ -1,0 +1,28 @@
+body {
+    background-image: url("../images/background.jpg");
+}
+
+/*.nav .navbar-nav li a{
+    background-image: url("../images/xmenapocalypseimax.jpg");    
+}*/
+
+.contacts {
+    color: darkred;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    text-shadow: 2px 2px lightblue;
+    text-align: bottom;   
+    margin-left: 350px;
+}
+
+.contacts a.github {
+    text-decoration: none;
+    font-size: 40px;
+    color: darkred;
+    font-style: oblique;
+    text-shadow: 2px 2px lightblue;
+}
+
+.contacts a.github:hover {
+    text-decoration: underline;
+    font-size: 60px;
+}
