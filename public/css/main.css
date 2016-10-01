@@ -204,6 +204,19 @@ body {
     color: #ffffff;
 
 }
+
+#fixed-share-button {
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+}
+
+#fixed-share-button > img{
+    width:30%;
+}
+
+
+
 @media screen and (max-width: 900px) {
     #landing-title {
         font-size: 80px;
