@@ -194,6 +194,7 @@ body {
 
 #home-products-title{
     text-shadow: 2px 2px #333;
+    font-size: 50px;
 }
 
 .landing-product-image{
@@ -202,13 +203,13 @@ body {
 
 .landing-product-title{
     color: #ffffff;
-    font-size: 25px;
+    font-size: 20px;
+    font-style: italic;
     margin-bottom: 5px;
 }
 
 .landing-product-price{
     color: #ffffff;
-
 }
 
 #fixed-share-button {
