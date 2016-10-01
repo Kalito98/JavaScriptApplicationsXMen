@@ -17,3 +17,7 @@ router
 $('.btn-nav-logout').click(() => {
     controllers.logout();
 });
+
+$(document).ready(() => {
+    $('.hidden-when-not-logged-in').hide();
+});

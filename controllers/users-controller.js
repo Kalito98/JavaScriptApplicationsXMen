@@ -69,8 +69,6 @@ module.exports = function (db) {
             .value()
             .find(x => x.username === reqUser.username);
 
-        console.log(user);
-
         if (!user || user.passHash !== reqUser.passHash) {
             return res.status(404)
                 .send("Invalid username or password");
