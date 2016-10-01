@@ -128,6 +128,8 @@ let controllers = {
                             dataService.login(user)
                                 .then((respUser) => {
                                     $(document.body).addClass("logged-in");
+                                    $('.visible-when-not-logged-in').hide();
+                                    $('.hidden-when-not-logged-in').show();
                                     document.location = "#/home";
                                 });
 
@@ -161,6 +163,8 @@ let controllers = {
         dataService.logout()
             .then(() => {
                 $(document.body).removeClass("logged-in");
+                $('.visible-when-not-logged-in').show();
+                $('.hidden-when-not-logged-in').hide();
             });
     }
 };

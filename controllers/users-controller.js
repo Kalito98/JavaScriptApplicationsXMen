@@ -29,7 +29,7 @@ module.exports = function (db) {
 
     function post(req, res) {
         let user = req.body;
-        if (!user || typeof user.username !== "string" || typeof user.passHash !== "string") {
+        if (!user || typeof user.username !== "string" || typeof user.passHash !== "string" || !user.username || !user.passHash) {
             return res.status(400)
                 .send("Invalid user");
         }

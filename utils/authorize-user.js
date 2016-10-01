@@ -6,9 +6,7 @@ module.exports = function (app, db) {
         var authKey = req.headers["x-auth-key"];
         req.user = db.get("users")
             .value()
-            .find({
-                authKey: authKey
-            });
+            .find(x => x.authKey = authKey);
         next();
     });
 };

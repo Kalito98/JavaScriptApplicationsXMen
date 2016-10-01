@@ -116,8 +116,7 @@
       "username": "pesho",
       "passHash": "pesho",
       "usernameToLower": "pesho",
-      "id": "16655985-e510-43d4-ad1c-2388c76d1ef6",
-      "authKey": "16655985-e510-43d4-ad1c-2388c76d1ef6FwHCPd*bP:.;Fu&:evl)RPGg"
+      "id": "16655985-e510-43d4-ad1c-2388c76d1ef6"
     },
     {
       "username": "asdasd",
@@ -128,8 +127,13 @@
       "username": "peshopesho",
       "passHash": "pesho",
       "usernameToLower": "peshopesho",
-      "id": 1254,
-      "authKey": "1tVuTSLLLzoZURMBiUqgMKVUrPxBNmgMgTkYKcCiYuTqUveGVXPMAHreMyDB"
+      "id": 1254
+    },
+    {
+      "username": "",
+      "passHash": "",
+      "usernameToLower": "",
+      "id": 1
     }
   ]
 }

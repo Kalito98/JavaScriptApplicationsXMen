@@ -27,7 +27,6 @@ let dataService = {
     logout() {
         return Promise.resolve()
             .then(() => {
-                console.log(5);
                 localStorage.removeItem("username");
                 localStorage.removeItem("authKey");
             });
