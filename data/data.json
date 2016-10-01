@@ -134,6 +134,12 @@
       "passHash": "",
       "usernameToLower": "",
       "id": 1
+    },
+    {
+      "username": "peshokiro",
+      "passHash": "pesho",
+      "usernameToLower": "peshokiro",
+      "id": 1
     }
   ]
 }

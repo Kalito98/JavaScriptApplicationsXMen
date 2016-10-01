@@ -2,9 +2,14 @@ body {
     padding-top: 0px;
 }
 
+.hidden-when-not-logged-in {
+    display: none;
+}
+
 #loginControls {
     float: right;
 }
+
 #main {
     margin: 0 auto;
     padding: 0;
@@ -15,6 +20,7 @@ body {
     padding: 20px;
     margin: 1.5%;
 }
+
 #home {
     padding: 0;
     padding-top: -20px;
@@ -22,9 +28,11 @@ body {
     margin-top: -50px;
     min-height: 2000px;
 }
+
 #landing-image-wrapper {
     margin-top: -150px;
 }
+
 #landing-image {
     width: 100vw;
     -webkit-filter: brightness(50%);
@@ -34,6 +42,7 @@ body {
     filter: brightness(50%);
     /* For IE8 and earlier */
 }
+
 #landing-title {
     position: absolute;
     top: 30%;
@@ -50,24 +59,27 @@ body {
     line-height: 1;
     text-shadow: 2px 5px #000000;
 }
+
 @media screen and (max-width: 900px) {
     #landing-title {
         font-size: 80px;
         top: 20%;
     }
-    .arrow{
-        display:none;
+    .arrow {
+        display: none;
     }
 }
+
 @media screen and (max-width: 660px) {
     #landing-title {
         font-size: 40px;
         top: 10%;
     }
-    .arrow{
-        display:none;
+    .arrow {
+        display: none;
     }
 }
+
 
 /*.login, .logout{
     display: none;
@@ -214,16 +226,4 @@ body {
 
 #home-products {
     margin-top: 250px;
-}
-
-.hidden-when-not-logged-in {
-    display: none;
-}
-
-.logged-in .hidden-when-not-logged-in {
-    display: initial;
-}
-
-.logged-in .visible-when-not-logged-in {
-    display: none;
 }
