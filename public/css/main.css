@@ -71,6 +71,12 @@ body {
     margin-top: 0px;
     height: 70vh;
     background-image: url("../images/landing.jpg");
+    -webkit-filter: brightness(50%);
+    -moz-filter: brightness(50%);
+    filter: url(#brightness);
+    /* required for FF */
+    filter: brightness(50%);
+    /* For IE8 and earlier */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
