@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 app.use(express.static("public"));
 
-// require("./utils/authorize-user")(app, db);
+require("./utils/authorize-user")(app, db);
 
 let usersController = require("./controllers/users-controller")(db);
 app.get("/api/users", usersController.get);

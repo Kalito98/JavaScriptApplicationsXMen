@@ -6,7 +6,8 @@ const idGenerator = require('../utils/id-generator');
 
 module.exports = function (db) {
     db.defaults({
-            products: []
+            products: [],
+            users: []
         })
         .value();
 

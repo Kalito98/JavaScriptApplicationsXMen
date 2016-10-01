@@ -1,5 +1,5 @@
 let requester = {
-    get(url) {
+    get: (url) => {
         let promise = new Promise((resolve, reject) => {
             $.ajax({
                 url,
@@ -9,6 +9,7 @@ let requester = {
                 }
             });
         });
+
         return promise;
     },
     putJSON: (url, body, options = {}) => {

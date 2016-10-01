@@ -1,11 +1,13 @@
 /* globals module */
 
 module.exports = function (db) {
+    const idGenerator = require('../utils/id-generator');
+
     const AUTH_KEY_LENGTH = 60,
         AUTH_KEY_CHARS = "qwertyuiopasdfghjklzxcvbnmWERTYUIOPASDFGHJKLZXCVBNM";
 
     function generateAuthKey(uniquePart) {
-        let authKey = uniquePart,
+        let authKey = uniquePart + '',
             index;
 
         while (authKey.length < AUTH_KEY_LENGTH) {
@@ -17,19 +19,8 @@ module.exports = function (db) {
     }
 
     function get(req, res) {
-        let user = req.user;
-        if (!user) {
-            return res.status(401)
-                .send("Unauthorized user!");
-        }
-
-        let users = db("users")
-            .map(u => {
-                return {
-                    username: u.username,
-                    id: u.id
-                };
-            });
+        let users = db.get("users")
+            .value();
 
         return res.send({
             result: users
@@ -38,21 +29,31 @@ module.exports = function (db) {
 
     function post(req, res) {
         let user = req.body;
-        if (!user || typeof user.username !== "string" || typeof user.passHash !== "string") {
+        if (!user || typeof user.username !== "string" || typeof user.passHash !== "string" || !user.username || !user.passHash) {
             return res.status(400)
                 .send("Invalid user");
         }
 
-        let dbUser = db("users").find({
-            usernameToLower: user.username.toLowerCase()
-        });
+        user.usernameToLower = user.username.toLowerCase();
+
+        let dbUser = db.get("users")
+            .value()
+            .find(x => x.usernameToLower === user.usernameToLower);
+
 
         if (dbUser) {
             return res.status(400)
                 .send("Duplicated user");
         }
-        user.usernameToLower = user.username.toLowerCase();
-        db("users").insert(user);
+
+        user.id = idGenerator.next().value;
+        user.authKey = generateAuthKey(user.id);
+
+        db.get("users")
+            .push(user)
+            .value();
+
+        console.log(db.get('users').value());
 
         return res.status(201)
             .send({
@@ -64,9 +65,12 @@ module.exports = function (db) {
 
     function put(req, res) {
         let reqUser = req.body;
-        let user = db("users").find({
-            usernameToLower: reqUser.username.toLowerCase()
-        });
+        let user = db.get("users")
+            .value()
+            .find(x => x.username === reqUser.username);
+
+        console.log(user);
+
         if (!user || user.passHash !== reqUser.passHash) {
             return res.status(404)
                 .send("Invalid username or password");
@@ -85,7 +89,8 @@ module.exports = function (db) {
         });
     }
 
-    return {get,
+    return {
+        get,
         post,
         put
     };

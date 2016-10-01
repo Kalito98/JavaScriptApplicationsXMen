@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Awesome store</title>
     <!--  Latest compiled and minified Boootstrap CSS-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -39,7 +40,8 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -57,14 +59,11 @@
                         <li><a href="#/contact">Contact us</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <form id="search-form" class="navbar-form navbar-left" role="search">
-                                <div class="form-group">
-                                    <input id="search" type="text" class="form-control" placeholder="Search" required />
-                                </div>
-                                <button type="submit" class="btn btn-default"><a id="search-btn">Search</a></button>
-                            </form>
-
+                        <li class="visible-when-not-logged-in">
+                            <a href="#/login">Login</a>
+                        </li>
+                        <li class="hidden-when-not-logged-in">
+                            <a class="btn-nav-logout" href="#/logout">Logout</a>
                         </li>
                     </ul>
                 </div>
