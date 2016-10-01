@@ -23,7 +23,7 @@ module.exports = function (db) {
                 .send("Unauthorized user!");
         }
 
-        let users = db("users")
+        let users = db.get("users")
             .map(u => {
                 return {
                     username: u.username,
@@ -43,7 +43,7 @@ module.exports = function (db) {
                 .send("Invalid user");
         }
 
-        let dbUser = db("users").find({
+        let dbUser = db.get("users").find({
             usernameToLower: user.username.toLowerCase()
         });
 
@@ -52,7 +52,7 @@ module.exports = function (db) {
                 .send("Duplicated user");
         }
         user.usernameToLower = user.username.toLowerCase();
-        db("users").insert(user);
+        db.get("users").insert(user);
 
         return res.status(201)
             .send({
@@ -63,8 +63,9 @@ module.exports = function (db) {
     }
 
     function put(req, res) {
+        console.log(5);
         let reqUser = req.body;
-        let user = db("users").find({
+        let user = db.get("users").find({
             usernameToLower: reqUser.username.toLowerCase()
         });
         if (!user || user.passHash !== reqUser.passHash) {

@@ -35,7 +35,7 @@ let controllers = {
 
                 return templates.get('magazines');
             })
-            .then((templateHtml) =>{
+            .then((templateHtml) => {
                 let templateFunc = handlebars.compile(templateHtml);
                 let html = templateFunc(magazines.result);
 
@@ -51,7 +51,7 @@ let controllers = {
 
                 return templates.get('comics');
             })
-            .then((templateHtml) =>{
+            .then((templateHtml) => {
                 let templateFunc = handlebars.compile(templateHtml);
                 let html = templateFunc(comics.result);
 
@@ -66,7 +66,7 @@ let controllers = {
 
                 return templates.get('cds');
             })
-            .then((templateHtml) =>{
+            .then((templateHtml) => {
                 let templateFunc = handlebars.compile(templateHtml);
                 let html = templateFunc(cds.result);
 
@@ -81,7 +81,7 @@ let controllers = {
 
                 return templates.get('cds');
             })
-            .then((templateHtml) =>{
+            .then((templateHtml) => {
                 let templateFunc = handlebars.compile(templateHtml);
                 let html = templateFunc(dvds.result);
 
@@ -97,6 +97,56 @@ let controllers = {
             });
     },
     login: () => {
+        dataService.isLoggedIn()
+            .then(isLoggedIn => {
+                if (isLoggedIn) {
+                    //redirect to
+                    window.location = "#/home";
+                    return;
+                }
 
+                templates.get("login")
+                    .then((templateHtml) => {
+                        let templateFunc = handlebars.compile(templateHtml);
+                        let html = templateFunc();
+
+                        $("#main").html(html);
+
+                        $("#btn-login").on("click", (ev) => {
+                            let user = {
+                                username: $("#tb-username").val(),
+                                passHash: $("#tb-password").val()
+                            };
+
+                            dataService.login(user)
+                                .then((respUser) => {
+                                    $(document.body).addClass("logged-in");
+                                    document.location = "#/home";
+                                });;
+
+                            ev.preventDefault();
+                            return false;
+                        });
+
+                        $("#btn-register").on("click", (ev) => {
+                            let user = {
+                                username: $("#tb-username").val(),
+                                passHash: $("#tb-password").val()
+                            };
+
+                            dataService.register(user)
+                                .then((respUser) => {
+                                    return dataService.login(user);
+                                })
+                                .then((respUser) => {
+                                    $(document.body).addClass("logged-in");
+                                    document.location = "#/home";
+                                });
+                            ev.preventDefault();
+                            return false;
+                        });
+
+                    });
+            });
     }
 };

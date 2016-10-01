@@ -2,16 +2,39 @@ let dataService = {
     books() {
         return requester.getJSON("/api/products/books");
     },
-    magazines(){
+    magazines() {
         return requester.getJSON("/api/products/magazines");
     },
-    comics(){
+    comics() {
         return requester.getJSON("/api/products/comics");
     },
-    dvds(){
+    dvds() {
         return requester.getJSON("/api/products/dvds");
     },
-    cds(){
+    cds() {
         return requester.getJSON("/api/products/cds");
+    },
+    login(user) {
+        return requester.putJSON("/api/auth", user)
+            .then(respUser => {
+                localStorage.setItem("username", respUser.result.username);
+                localStorage.setItem("authKey", respUser.result.authKey);
+            });
+    },
+    register(user) {
+        return requester.postJSON("/api/users", user);
+    },
+    logout() {
+        return Promise.resolve()
+            .then(() => {
+                localStorage.removeItem("username");
+                localStorage.removeItem("authKey");
+            });
+    },
+    isLoggedIn() {
+        return Promise.resolve()
+            .then(() => {
+                return !!localStorage.getItem("username");
+            });
     }
 };
