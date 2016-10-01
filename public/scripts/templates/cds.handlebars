@@ -5,7 +5,7 @@
     {{#each this}}
         <div class="media">
             <div class="media-left">
-                <img class="media-object" src="images/{{this.name}}.png">
+                <img class="media-object" src="images/{{this.id}}.jpg" width="150px">
             </div>
             <div class="media-body">
                 <h4 class="media-heading">Title: {{this.name}}</h4>
@@ -14,7 +14,7 @@
                     <li>Category: {{this.category}}</li>
                     <li>Rating: {{this.rating}}</li>
                     <li>Duration: {{this.duration}}</li>
-                    <li>Songs: {{this.songs}}</li>
+                    <li>artist: {{this.artist}}</li>
                     <li>Number of songs: {{this.songCount}}</li>
                 </ul>
             </div>
