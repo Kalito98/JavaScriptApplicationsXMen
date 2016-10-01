@@ -1,12 +1,76 @@
 <div id="home">
     <div id="landing-image-wrapper">
-        <img id="landing-image" src="../../images/landing.jpg" alt="" class="img-responsive" />
         <h1 id="landing-title">X E-Library</h1>
     </div>
     <div id="down-btn" class="arrow bounce">
     </div>
 
     <div id="home-products">
-        <h3>Latest Products</h3>
+        <h2 id="home-products-title">Latest Products</h2>
+        <div class="products-slider">
+            <ul>
+                {{#each this}}
+                    {{#each books}}
+                        <li>
+                            <div class="single-product-wrapper">
+                                <h2 class="landing-product-title">{{this.name}}</h2>
+                                <img class="landing-product-image" src="images/{{this.id}}.jpg">
+                                <p class="landing-product-price">
+                                    {{this.price}} $
+                                </p>
+
+                                <p>
+                                    {{this.author}}
+                                </p>
+                            </div>
+                        </li>
+                    {{/each}}
+                    {{#each cds}}
+                        <li>
+                            <div class="single-product-wrapper">
+                                <h2 class="landing-product-title">{{this.name}}</h2>
+                                <img class="landing-product-image" src="images/{{this.id}}.jpg">
+                                <p class="landing-product-price">
+                                    {{this.price}} $
+                                </p>
+                            </div>
+                        </li>
+                    {{/each}}
+                    {{#each dvds}}
+                        <li>
+                            <div class="single-product-wrapper">
+                                <h2 class="landing-product-title">{{this.name}}</h2>
+                                <img class="landing-product-image" src="images/{{this.id}}.jpg">
+                                <p class="landing-product-price">
+                                    {{this.price}} $
+                                </p>
+                            </div>
+                        </li>
+                    {{/each}}
+                    {{#each comics}}
+                        <li>
+                            <div class="single-product-wrapper">
+                                <h2 class="landing-product-title">{{this.name}}</h2>
+                                <img class="landing-product-image" src="images/{{this.id}}.jpg">
+                                <p class="landing-product-price">
+                                    {{this.price}} $
+                                </p>
+                            </div>
+                        </li>
+                    {{/each}}
+                    {{#each magazines}}
+                        <li>
+                            <div class="single-product-wrapper">
+                                <h2 class="landing-product-title">{{this.name}}</h2>
+                                <img class="landing-product-image" src="images/{{this.id}}.jpg">
+                                <p class="landing-product-price">
+                                    {{this.price}} $
+                                </p>
+                            </div>
+                        </li>
+                    {{/each}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
 </div>

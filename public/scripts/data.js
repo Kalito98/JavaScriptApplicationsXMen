@@ -1,4 +1,7 @@
 let dataService = {
+    products(){
+        return requester.getJSON("/api/products");
+    },
     books() {
         return requester.getJSON("/api/products/books");
     },

@@ -60,31 +60,6 @@ body {
     text-shadow: 2px 5px #000000;
 }
 
-@media screen and (max-width: 900px) {
-    #landing-title {
-        font-size: 80px;
-        top: 20%;
-    }
-    .arrow {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 660px) {
-    #landing-title {
-        font-size: 40px;
-        top: 10%;
-    }
-    .arrow {
-        display: none;
-    }
-}
-
-
-/*.login, .logout{
-    display: none;
-}*/
-
 #home {
     padding: 0;
     padding-top: -20px;
@@ -92,19 +67,14 @@ body {
     margin-top: -50px;
     min-height: 2000px;
 }
-
 #landing-image-wrapper {
-    margin-top: -150px;
-}
-
-#landing-image {
-    width: 100vw;
-    -webkit-filter: brightness(50%);
-    -moz-filter: brightness(50%);
-    filter: url(#brightness);
-    /* required for FF */
-    filter: brightness(50%);
-    /* For IE8 and earlier */
+    margin-top: 0px;
+    height: 70vh;
+    background-image: url("../images/landing.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #landing-title {
@@ -123,33 +93,8 @@ body {
     line-height: 1;
     text-shadow: 2px 5px #000000;
 }
-
-@media screen and (max-width: 900px) {
-    #landing-title {
-        font-size: 80px;
-        top: 20%;
-    }
-    .arrow {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 660px) {
-    #landing-title {
-        font-size: 40px;
-        top: 10%;
-    }
-    .arrow {
-        display: none;
-    }
-}
-
 @-moz-keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
+    0%, 20%, 50%, 80%, 100% {
         -moz-transform: translateY(0);
         transform: translateY(0);
     }
@@ -162,13 +107,8 @@ body {
         transform: translateY(-15px);
     }
 }
-
 @-webkit-keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
+    0%, 20%, 50%, 80%, 100% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
@@ -181,13 +121,8 @@ body {
         transform: translateY(-15px);
     }
 }
-
 @keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
+    0%, 20%, 50%, 80%, 100% {
         -moz-transform: translateY(0);
         -ms-transform: translateY(0);
         -webkit-transform: translateY(0);
@@ -206,7 +141,6 @@ body {
         transform: translateY(-15px);
     }
 }
-
 .arrow {
     position: absolute;
     margin-top: 5%;
@@ -217,13 +151,74 @@ body {
     background-image: url("../images/arrow.jpg");
     background-size: contain;
 }
-
 .bounce {
     -moz-animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
 }
-
 #home-products {
     margin-top: 250px;
+    padding: 1%;
+    background: #000000;
+    height: 100vh;
+    text-align: center;
+}
+#home-products> h2 {
+    color: #ffffff;
+}
+.hidden-when-not-logged-in {
+    display: none;
+}
+.logged-in .hidden-when-not-logged-in {
+    display: initial;
+}
+.logged-in .visible-when-not-logged-in {
+    display: none;
+}
+
+.products-slider{
+    height:70vh;
+}
+
+.single-product-wrapper{
+    padding: 1%;
+    background-color: black;
+    height: 70vh;
+}
+
+#home-products-title{
+    text-shadow: 2px 2px #333;
+}
+
+.landing-product-image{
+    width: 200px;
+}
+
+.landing-product-title{
+    color: #ffffff;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.landing-product-price{
+    color: #ffffff;
+
+}
+@media screen and (max-width: 900px) {
+    #landing-title {
+        font-size: 80px;
+        top: 30%;
+    }
+    .arrow {
+        margin-top: 10%;
+    }
+}
+@media screen and (max-width: 660px) {
+    #landing-title {
+        font-size: 40px;
+        top: 30%;
+    }
+    .arrow {
+        margin-top: 15%;
+    }
 }

@@ -2,18 +2,28 @@ var handlebars = handlebars || Handlebars;
 
 let controllers = {
     home: () => {
-        return templates.get('home')
+        var products;
+
+        dataService.products()
+            .then((productsResponse) => {
+                products = productsResponse;
+                console.log(products);
+                return templates.get('home')
+            })
             .then((templateHtml) => {
                 let templateFunc = handlebars.compile(templateHtml);
-                let html = templateFunc();
+                let html = templateFunc(products);
                 $("#main").html(html);
 
-                $("#down-btn").click(function () {
+                $("#down-btn").click(function() {
                     console.log("clicked");
                     $('html, body').animate({
-                        scrollTop: $("#home-products").offset().top - 100
+                        scrollTop: $("#home-products").offset().top - 50
                     }, 1500);
                 });
+
+                $('.products-slider').unslider()
+
             });
     },
     products: () => {
