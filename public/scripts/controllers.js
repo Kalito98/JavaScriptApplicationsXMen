@@ -7,6 +7,13 @@ let controllers = {
                 let templateFunc = handlebars.compile(templateHtml);
                 let html = templateFunc();
                 $("#main").html(html);
+
+                $("#down-btn").click(function () {
+                    console.log("clicked");
+                    $('html, body').animate({
+                        scrollTop: $("#home-products").offset().top - 100
+                    }, 1500);
+                });
             });
     },
     products: () => {
