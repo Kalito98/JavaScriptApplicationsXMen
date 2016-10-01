@@ -22,8 +22,7 @@ let controllers = {
                     }, 1500);
                 });
 
-                $('.products-slider').unslider()
-
+                $('.products-slider').unslider();
             });
     },
     products: () => {

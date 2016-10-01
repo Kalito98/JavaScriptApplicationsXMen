@@ -207,12 +207,24 @@ body {
 
 #fixed-share-button {
     position: fixed;
-    bottom: 30px;
-    left: 0;
+    bottom: 60px;
+    right: 0;
+}
+
+#fixed-tweet-button{
+    position: fixed;
+    bottom:20px;
+    right: 0;
 }
 
 #fixed-share-button > img{
-    width:30%;
+    width:35px;
+    height:auto;
+}
+
+#fixed-tweet-button > img{
+    width: 35px;
+    height:auto;
 }
 
 
