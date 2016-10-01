@@ -1,101 +1,116 @@
 {
-    "products": {
-        "dvds": [{
-            "id": 1,
-            "name": "X-Men: Days of Future Past",
-            "price": 12,
-            "category": "action",
-            "rating": 8,
-            "duration": 132,
-            "summary": "The X-Men send Wolverine to the past in a desperate effort to change history and prevent an event that results in doom for both humans and mutants.",
-            "premiereYear": 2014
-        }, {
-            "id": 2,
-            "name": "Star Wars: The Force Awakens",
-            "price": 44,
-            "category": "adventure",
-            "rating": 8.2,
-            "duration": 138,
-            "summary": "Three decades after the defeat of the Galactic Empire, a new threat arises. The First Order attempts to rule the galaxy and only a ragtag group of heroes can stop them, along with the help of the Resistance.",
-            "premiereYear": 2015
-        }],
-        "cds": [{
-            "id": 3,
-            "name": "Recovery",
-            "price": 22,
-            "category": "hip hop",
-            "rating": 10,
-            "duration": 77.44,
-            "artist":"Emimen",
-            "songCount": 17
-        }, {
-            "id": 4,
-            "name": "Anti",
-            "price": 14,
-            "category": "pop",
-            "rating": 4.8,
-            "duration": 43,
-            "artist":"Rihanna",
-              "songCount": 16
-        }],
-        "books": [{
-            "id": 5,
-            "name": "The Lord of the Rings",
-            "price": 40,
-            "category": "fantasy",
-            "author": "J. R. R. Tolkien",
-            "pages": 1216,
-            "cover": "soft",
-            "summary": "We all know what it is about. No summary needed."
-        }, {
-            "id": 6,
-            "name": "Harry Potter and the Goblet of Fire",
-            "price": 20,
-            "category": "fantasy",
-            "author": "J. K. Rowling",
-            "pages": 636,
-            "cover": "soft",
-            "summary": "Harry Potter and the Goblet of Fire is the fourth novel in the Harry Potter series, written by British author J. K. Rowling. It follows Harry Potter, a wizard in his fourth year at Hogwarts School of Witchcraft and Wizardry and the mystery surrounding the entry of Harry's name into the Triwizard Tournament, in which he is forced to compete."
-        }],
-        "magazines": [{
-            "id": 7,
-            "name": "Time",
-            "price": 6,
-            "category": "news",
-            "author": "Nancy Gibbs",
-            "theme": "identity of modern hero",
-            "pages": 100,
-            "present": "no"
-        }, {
-            "id": 8,
-            "name": "National Geographic",
-            "price": 10,
-            "category": "nature",
-            "author": "Susan Goldberg",
-            "pages": 123,
-            "theme": "june 1985",
-            "present": "yes"
-        }],
-        "comics": [{
-            "id": 9,
-            "name": "X-Men: Legacy",
-            "price": 14,
-            "category": "superhero",
-            "author": "Simon Spurrier",
-            "pages": 40,
-            "superhero name": "X-men",
-            "publisher": "marvel"
-        }, {
-            "id": 10,
-            "name": "The Amaizing Spider-man",
-            "price": 14,
-            "category": "superhero",
-            "author": "Stan Lee",
-            "pages": 56,
-            "superhero name": "Spider-man",
-            "publisher": "marvel"
-        }],
-        "posts": [],
-        "user": {}
-    }
+  "products": {
+    "dvds": [
+      {
+        "id": 1,
+        "name": "Dvd1",
+        "price": 12,
+        "category": "funny",
+        "rating": 3,
+        "duration": 122,
+        "summary": "very much interesting",
+        "premiereYear": 2012
+      },
+      {
+        "id": 2,
+        "name": "Dvd2",
+        "price": 44,
+        "category": "not funny",
+        "rating": 1.5,
+        "duration": 77,
+        "summary": "very much not interesting",
+        "premiereYear": 1966
+      }
+    ],
+    "cds": [
+      {
+        "id": 3,
+        "name": "Cd1",
+        "price": 22,
+        "category": "chalga",
+        "rating": 1,
+        "duration": 74,
+        "summary": "very degrading",
+        "premiereYear": 2001
+      },
+      {
+        "id": 4,
+        "name": "Cd2",
+        "price": 14,
+        "category": "rock",
+        "rating": 4.8,
+        "duration": 123,
+        "summary": "ACDC",
+        "premiereYear": 1975
+      }
+    ],
+    "books": [
+      {
+          "id": 5,
+          "name": "Book 1",
+          "price": 14,
+          "category": "rock",
+          "author": "brani",
+          "pages": 123,
+          "cover": "soft",
+          "summary": "very interesting book"
+      },
+      {
+          "id": 6,
+          "name":"Bodfdfok",
+          "price": 14,
+          "category": "rdfock",
+          "author": "branidfdf",
+          "pages": 123,
+          "cover": "soft",
+          "summary": "very interestdfing book"
+      }
+    ],
+    "magazines": [
+      {
+          "id": 7,
+          "name":"Bodfsdsdfok",
+          "price": 14,
+          "category": "rdfock",
+          "author": "branidfdf",
+          "pages": 123,
+          "theme": "soft",
+          "present": "yes"
+      },
+      {
+          "id": 8,
+          "name":"Fame",
+          "price": 14,
+          "category": "rdfock",
+          "author": "bsdrasdnidfdf",
+          "pages": 123,
+          "theme": "soft",
+          "present": "yes"
+      }
+    ],
+    "comics": [
+      {
+          "id": 9,
+          "name":"Spider man",
+          "price": 14,
+          "category": "rdfock",
+          "author": "bsdrasdnidfdf",
+          "pages": 123,
+          "superhero name": "soft",
+          "publisher": "marvel"
+      },
+      {
+          "id": 9,
+          "name":"Spider man 2",
+          "price": 14,
+          "category": "rdfock",
+          "author": "bsdrasdnidfdf",
+          "pages": 123,
+          "superhero name": "soft",
+          "publisher": "marvel"
+      }
+    ],
+    "posts": [],
+    "user": {}
+  }
 }
