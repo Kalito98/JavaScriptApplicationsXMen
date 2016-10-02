@@ -140,6 +140,18 @@
       "passHash": "pesho",
       "usernameToLower": "peshokiro",
       "id": 1
+    },
+    {
+      "username": "polia",
+      "passHash": "123456",
+      "usernameToLower": "polia",
+      "id": 1
+    },
+    {
+      "username": "hgfhg",
+      "passHash": "3356467",
+      "usernameToLower": "hgfhg",
+      "id": 2
     }
   ]
 }

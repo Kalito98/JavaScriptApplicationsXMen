@@ -160,6 +160,8 @@ let controllers = {
                                 })
                                 .then((respUser) => {
                                     $(document.body).addClass("logged-in");
+                                    $('.visible-when-not-logged-in').hide();
+                                    $('.hidden-when-not-logged-in').show();
                                     document.location = "#/home";
                                 });
 
