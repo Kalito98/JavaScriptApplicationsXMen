@@ -13,6 +13,7 @@ router
     .on('#/products/magazines', controllers.magazines)
     .on('#/products/books', controllers.books)
     .on('#/products/comics', controllers.comics)
+    .on('#/add', controllers.add)
     .on('#/home', controllers.home)
     .on(() => {
         router.navigate("#/home");

@@ -281,5 +281,36 @@ let controllers = {
                 $('.visible-when-not-logged-in').show();
                 $('.hidden-when-not-logged-in').hide();
             });
+    },
+    add: () => {
+        templates.get("addBook")
+            .then((templateHtml) => {
+                let templateFunc = handlebars.compile(templateHtml);
+                let html = templateFunc();
+
+                $("#main").html(html);
+
+                $("#btn-add").on("click", (ev) => {
+                    let book = {
+                        name: $("#tb-name").val(),
+                        img: $("#tb-img").val(),
+                        price: $("#tb-price").val(),
+                        category: $("#tb-name").val(),
+                        author: $("#tb-category").val(),
+                        pages: $("#tb-pages").val(),
+                        cover: $("#tb-cover").val(),
+                        summary: $("#tb-summary").val(),
+                    };
+
+                    dataService.addBook(book)
+                        .then((respUser) => {
+                            document.location = "#/home";
+                        });
+
+                    ev.preventDefault();
+                    return false;
+                });
+
+            });
     }
 };

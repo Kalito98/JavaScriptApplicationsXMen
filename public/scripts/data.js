@@ -27,6 +27,9 @@ let dataService = {
     register(user) {
         return requester.postJSON("/api/users", user);
     },
+    addBook(book) {
+        return requester.postJSON("/api/products/books", book);
+    },
     logout() {
         return Promise.resolve()
             .then(() => {
