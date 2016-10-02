@@ -8,7 +8,7 @@
     padding: 10px;
     text-align: center;
     border-radius: 5px;
-    background-color: #333;
+    background-color: #e7e7e7;
 }
 .item-container {
     display: inline-block;
@@ -23,14 +23,14 @@
     padding-left: 0;
 }
 .item-properties li{
-  color: #ffffff;
+  color: #333;
 }
 h3, h2, h4 {
     margin: 5px;
-    color: #ffffff;
+    color: #333;
 }
 .item-properties li a:hover{
-  color: #ffffff;
+  color: #333;
   text-decoration: none;
 }
 .item-properties span{
