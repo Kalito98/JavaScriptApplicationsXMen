@@ -60,7 +60,7 @@ body {
     padding-top: -20px;
     margin: 0;
     margin-top: -50px;
-    min-height: 2000px;
+    min-height: 1100px;
 }
 #landing-image-wrapper {
     margin-top: 0px;
@@ -217,6 +217,7 @@ body {
     width: 35px;
     height: auto;
 }
+
 @media screen and (max-width: 900px) {
     #landing-title {
         font-size: 80px;
