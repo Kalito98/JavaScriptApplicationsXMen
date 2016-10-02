@@ -15,10 +15,30 @@ let controllers = {
                 let html = templateFunc(products);
                 $("#main").html(html);
 
+                $(".navbar").removeClass("navbar-default").addClass("navbar-inverse");
+
+                $(window).scroll(function() {
+                    var height = $(window).scrollTop();
+
+                    if (height > 50) {
+                        $(".navbar").removeClass("navbar-inverse").addClass("navbar-default");
+                        $('#return-to-top').fadeIn(200);
+                    } else {
+                        $(".navbar").removeClass("navbar-default").addClass("navbar-inverse");
+                        $('#return-to-top').fadeOut(200);
+                    }
+                });
+
+                $('#return-to-top').click(function() { // When arrow is clicked
+                    $('body,html').animate({
+                        scrollTop: 0 // Scroll to top of body
+                    }, 500);
+                });
+
                 $("#down-btn").click(function() {
                     console.log("clicked");
                     $('html, body').animate({
-                        scrollTop: $("#home-products").offset().top - 50
+                        scrollTop: $("#home-products").offset().top - 30
                     }, 1500);
                 });
 
@@ -42,7 +62,7 @@ let controllers = {
 
                 $("#main").html(html);
 
-
+                $(".navbar").removeClass("navbar-inverse").addClass("navbar-default");
             });
     },
     magazines: () => {
@@ -58,6 +78,8 @@ let controllers = {
                 let html = templateFunc(magazines.result);
 
                 $('#main').html(html);
+
+                $(".navbar").removeClass("navbar-inverse").addClass("navbar-default");
             });
 
     },
@@ -74,6 +96,8 @@ let controllers = {
                 let html = templateFunc(comics.result);
 
                 $('#main').html(html);
+
+                $(".navbar").removeClass("navbar-inverse").addClass("navbar-default");
             });
     },
     cds: () => {
@@ -89,6 +113,8 @@ let controllers = {
                 let html = templateFunc(cds.result);
 
                 $('#main').html(html);
+
+                $(".navbar").removeClass("navbar-inverse").addClass("navbar-default");
             });
     },
     dvds: () => {
@@ -104,6 +130,8 @@ let controllers = {
                 let html = templateFunc(dvds.result);
 
                 $('#main').html(html);
+
+                $(".navbar").removeClass("navbar-inverse").addClass("navbar-default");
             });
     },
     contact: () => {
@@ -112,6 +140,8 @@ let controllers = {
                 let templateFunc = handlebars.compile(templateHtml);
                 let html = templateFunc(templateFunc);
                 $("#main").html(html);
+
+                $(".navbar").removeClass("navbar-inverse").addClass("navbar-default");
             });
     },
     login: () => {
@@ -130,6 +160,8 @@ let controllers = {
 
                         $("#main").html(html);
 
+                        $(".navbar").removeClass("navbar-inverse").addClass("navbar-default");
+
                         $("#btn-login").on("click", (ev) => {
                             let user = {
                                 username: $("#tb-username").val(),
@@ -138,6 +170,7 @@ let controllers = {
 
                             dataService.login(user)
                                 .then((respUser) => {
+                                    console.log(respUser);
                                     $(document.body).addClass("logged-in");
                                     $('.visible-when-not-logged-in').hide();
                                     $('.hidden-when-not-logged-in').show();

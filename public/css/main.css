@@ -13,7 +13,7 @@ body {
 #main {
     margin: 0 auto;
     padding: 0;
-    padding-top: 70px;
+    padding-top: 0px;
 }
 
 .media {
@@ -23,24 +23,14 @@ body {
 
 #home {
     padding: 0;
-    padding-top: -20px;
+    padding-top: 0px;
     margin: 0;
-    margin-top: -50px;
+    margin-top: -70px;
     min-height: 2000px;
 }
 
 #landing-image-wrapper {
     margin-top: -150px;
-}
-
-#landing-image {
-    width: 100vw;
-    -webkit-filter: brightness(50%);
-    -moz-filter: brightness(50%);
-    filter: url(#brightness);
-    /* required for FF */
-    filter: brightness(50%);
-    /* For IE8 and earlier */
 }
 
 #landing-title {
@@ -69,7 +59,7 @@ body {
 }
 #landing-image-wrapper {
     margin-top: 0px;
-    height: 70vh;
+    height: 80vh;
     background-image: url("../images/landing.jpg");
     -webkit-filter: brightness(50%);
     -moz-filter: brightness(50%);
@@ -81,6 +71,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    box-shadow: 0px 20px 150px #aaaaaa;
 }
 
 #landing-title {
@@ -215,13 +206,13 @@ body {
 #fixed-share-button {
     position: fixed;
     bottom: 60px;
-    right: 0;
+    left: 0;
 }
 
 #fixed-tweet-button{
     position: fixed;
     bottom:20px;
-    right: 0;
+    left: 0;
 }
 
 #fixed-share-button > img{
@@ -234,7 +225,54 @@ body {
     height:auto;
 }
 
-
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+#login-form{
+    width:300px;
+	height:200px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-100px 0 0 -150px;
+}
 
 @media screen and (max-width: 900px) {
     #landing-title {

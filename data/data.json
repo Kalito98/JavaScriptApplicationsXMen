@@ -140,6 +140,18 @@
       "passHash": "pesho",
       "usernameToLower": "peshokiro",
       "id": 1
+    },
+    {
+      "username": "hello",
+      "passHash": "12345",
+      "usernameToLower": "hello",
+      "id": 1
+    },
+    {
+      "username": "sdasd",
+      "passHash": "asdasd",
+      "usernameToLower": "sdasd",
+      "id": 1
     }
   ]
 }

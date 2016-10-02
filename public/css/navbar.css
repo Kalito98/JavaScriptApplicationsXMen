@@ -1,3 +1,8 @@
+.navbar-inverse {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+}
+
 @media (min-width: 768px) {
     .navbar .navbar-nav {
         display: inline-block;
