@@ -2,6 +2,10 @@ let router = new Navigo(null, false);
 
 router
     .on("#/products/books/:id", controllers.singleBook)
+    .on("#/products/dvds/:id", controllers.singleDvd)
+    .on("#/products/cds/:id", controllers.singleCd)
+    .on("#/products/magazines/:id", controllers.singleMagazine)
+    .on("#/products/comics/:id", controllers.singleComic)
     .on("#/login", controllers.login)
     .on('#/contact', controllers.contact)
     .on('#/products/dvds', controllers.dvds)

@@ -33,3 +33,6 @@ h3, h2, h4 {
   color: #ffffff;
   text-decoration: none;
 }
+.item-properties span{
+  font-weight: bold;
+}

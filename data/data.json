@@ -75,7 +75,7 @@
         "author": "Nancy Gibbs",
         "theme": "identity of modern hero",
         "pages": 100,
-        "present": "no"
+        "present": null
       },
       {
         "id": 8,
@@ -85,7 +85,7 @@
         "author": "Susan Goldberg",
         "pages": 123,
         "theme": "june 1985",
-        "present": "yes"
+        "present": 1
       }
     ],
     "comics": [
@@ -96,7 +96,7 @@
         "category": "superhero",
         "author": "Simon Spurrier",
         "pages": 40,
-        "superhero name": "X-men",
+        "superheroName": "X-men",
         "publisher": "marvel"
       },
       {
@@ -106,7 +106,7 @@
         "category": "superhero",
         "author": "Stan Lee",
         "pages": 56,
-        "superhero name": "Spider-man",
+        "superheroName": "Spider-man",
         "publisher": "marvel"
       }
     ]

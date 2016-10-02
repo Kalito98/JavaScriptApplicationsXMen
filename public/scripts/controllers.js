@@ -47,17 +47,17 @@ let controllers = {
     },
     singleBook: (params) => {
         var books,
-        id=params.id;
+            id = params.id;
         console.log(id);
         dataService.books()
             .then((booksResponse) => {
-              for(i in booksResponse.result){
-                if(booksResponse.result[i].id === Number(id)){
-                books = booksResponse.result[i];
-                console.log(booksResponse.result[i].id);
-                console.log(books);
-              }
-              }
+                for (i in booksResponse.result) {
+                    if (booksResponse.result[i].id === Number(id)) {
+                        books = booksResponse.result[i];
+                        console.log(booksResponse.result[i].id);
+                        console.log(books);
+                    }
+                }
 
                 return templates.get("singleBook");
             })
@@ -84,6 +84,28 @@ let controllers = {
             });
 
     },
+    singleMagazine: (params) => {
+        var magazines,
+            id = params.id;
+        dataService.magazines()
+            .then((magazinesResponse) => {
+                for (i in magazinesResponse.result) {
+                    if (magazinesResponse.result[i].id === Number(id)) {
+                        magazines = magazinesResponse.result[i];
+                        console.log(magazinesResponse.result[i].id);
+                        console.log(magazines);
+                    }
+                }
+
+                return templates.get("singleMagazine");
+            })
+            .then((templateHtml) => {
+                let templateFunc = handlebars.compile(templateHtml);
+                let html = templateFunc(magazines);
+
+                $("#main").html(html);
+            });
+    },
     comics: () => {
         var comics;
         dataService.comics()
@@ -95,6 +117,25 @@ let controllers = {
             .then((templateHtml) => {
                 let templateFunc = handlebars.compile(templateHtml);
                 let html = templateFunc(comics.result);
+
+                $('#main').html(html);
+            });
+    },
+    singleComic: (params) => {
+        var comics,
+            id = params.id;
+        dataService.comics()
+            .then((comicsResponse) => {
+                for (i in comicsResponse.result) {
+                    if (comicsResponse.result[i].id === Number(id)) {
+                        comics = comicsResponse.result[i];
+                    }
+                }
+                return templates.get('singleComic');
+            })
+            .then((templateHtml) => {
+                let templateFunc = handlebars.compile(templateHtml);
+                let html = templateFunc(comics);
 
                 $('#main').html(html);
             });
@@ -114,17 +155,55 @@ let controllers = {
                 $('#main').html(html);
             });
     },
+    singleCd: (params) => {
+        var cds,
+            id = params.id;
+        dataService.cds()
+            .then((cdsResponse) => {
+                for (i in cdsResponse.result) {
+                    if (cdsResponse.result[i].id === Number(id)) {
+                        cds = cdsResponse.result[i];
+                    }
+                }
+                return templates.get('singleCd');
+            })
+            .then((templateHtml) => {
+                let templateFunc = handlebars.compile(templateHtml);
+                let html = templateFunc(cds);
+
+                $('#main').html(html);
+            });
+    },
     dvds: () => {
         var dvds;
         dataService.dvds()
             .then((dvdsResponse) => {
                 dvds = dvdsResponse;
 
-                return templates.get('cds');
+                return templates.get('dvds');
             })
             .then((templateHtml) => {
                 let templateFunc = handlebars.compile(templateHtml);
                 let html = templateFunc(dvds.result);
+
+                $('#main').html(html);
+            });
+    },
+    singleDvd: (params) => {
+        var dvds,
+            id = params.id;
+        dataService.dvds()
+            .then((dvdsResponse) => {
+                for (i in dvdsResponse.result) {
+                    if (dvdsResponse.result[i].id === Number(id)) {
+                        dvds = dvdsResponse.result[i];
+                    }
+                }
+                return templates.get('singleDvd');
+            })
+            .then((templateHtml) => {
+                let templateFunc = handlebars.compile(templateHtml);
+                let html = templateFunc(dvds);
 
                 $('#main').html(html);
             });
