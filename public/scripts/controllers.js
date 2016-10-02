@@ -45,6 +45,29 @@ let controllers = {
 
             });
     },
+    singleBook: (params) => {
+        var books,
+        id=params.id;
+        console.log(id);
+        dataService.books()
+            .then((booksResponse) => {
+              for(i in booksResponse.result){
+                if(booksResponse.result[i].id === Number(id)){
+                books = booksResponse.result[i];
+                console.log(booksResponse.result[i].id);
+                console.log(books);
+              }
+              }
+
+                return templates.get("singleBook");
+            })
+            .then((templateHtml) => {
+                let templateFunc = handlebars.compile(templateHtml);
+                let html = templateFunc(books);
+
+                $("#main").html(html);
+            });
+    },
     magazines: () => {
         var magazines;
         dataService.magazines()

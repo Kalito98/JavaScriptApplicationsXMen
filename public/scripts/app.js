@@ -1,6 +1,7 @@
 let router = new Navigo(null, false);
 
 router
+    .on("#/products/books/:id", controllers.singleBook)
     .on("#/login", controllers.login)
     .on('#/contact', controllers.contact)
     .on('#/products/dvds', controllers.dvds)
