@@ -277,6 +277,11 @@ describe('Tests', function () {
     });
 
     describe('Register tests', function () {
+        const user = {
+            username: 'pesho',
+            passHash: 'peshoPass'
+        };
+
         beforeEach(() => {
             sinon.stub(requester, 'postJSON').returns(new Promise((resolve, reject) => {
                 resolve(user);
@@ -288,7 +293,42 @@ describe('Tests', function () {
         });
 
         it('expect postJSON to be called once', function (done) {
-            
+            dataService.register(user)
+                .then(() => {
+                    expect(requester.postJSON.calledOnce).to.be.true;
+                })
+                .then(done, done);
+        });
+
+        it('expect postJSON to make correct call', function (done) {
+            dataService.register(user)
+                .then(() => {
+                    let actual = requester.postJSON
+                        .firstCall
+                        .args;
+
+                    expect(actual.length).to.equal(2);
+                    expect(actual[0]).to.equal('/api/users');
+                    expect(actual[1]).to.eql(user);
+                })
+                .then(done, done);
+        });
+
+        it('expect dataService.register() to post correct data', function (done) {
+            dataService.register(user)
+                .then(() => {
+                    let actual = requester.postJSON
+                        .firstCall
+                        .args[1];
+
+                    let properties = Object.keys(actual)
+                        .sort();
+
+                    expect(properties.length).to.equal(2);
+                    expect(properties[0]).to.equal('passHash');
+                    expect(properties[1]).to.equal('username');
+                })
+                .then(done, done);
         });
     });
 });
