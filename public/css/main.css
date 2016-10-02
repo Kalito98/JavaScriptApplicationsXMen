@@ -201,12 +201,12 @@ body {
 }
 #fixed-share-button {
     position: fixed;
-    bottom: 60px;
+    bottom: 100px;
     right: 0;
 }
 #fixed-tweet-button {
     position: fixed;
-    bottom: 20px;
+    bottom: 60px;
     right: 0;
 }
 #fixed-share-button>img {
