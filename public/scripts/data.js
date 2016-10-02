@@ -30,6 +30,18 @@ let dataService = {
     addBook(book) {
         return requester.postJSON("/api/products/books", book);
     },
+    addMagazine(magazine) {
+        return requester.postJSON("/api/products/magazines", magazine );
+    },
+    addComic(comic) {
+        return requester.postJSON("/api/products/comics",comic );
+    },
+    addCd(cd) {
+        return requester.postJSON("/api/products/cds", cd);
+    },
+    addDvd(dvd) {
+        return requester.postJSON("/api/products/dvds", dvd);
+    },
     logout() {
         return Promise.resolve()
             .then(() => {

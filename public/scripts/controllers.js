@@ -3,7 +3,16 @@ var handlebars = handlebars || Handlebars;
 let controllers = {
     home: () => {
         var products;
-
+        dataService.isLoggedIn()
+            .then(isLoggedIn => {
+                if (isLoggedIn) {
+                  $(document.body).addClass("logged-in");
+                  $('.visible-when-not-logged-in').hide();
+                  $('.hidden-when-not-logged-in').show();
+                    window.location = "#/home";
+                    return;
+                }
+                });
         dataService.products()
             .then((productsResponse) => {
                 products = productsResponse;
@@ -220,7 +229,9 @@ let controllers = {
         dataService.isLoggedIn()
             .then(isLoggedIn => {
                 if (isLoggedIn) {
-                    //redirect to
+                  $(document.body).addClass("logged-in");
+                  $('.visible-when-not-logged-in').hide();
+                  $('.hidden-when-not-logged-in').show();
                     window.location = "#/home";
                     return;
                 }
@@ -282,7 +293,7 @@ let controllers = {
                 $('.hidden-when-not-logged-in').hide();
             });
     },
-    add: () => {
+    addBook: () => {
         templates.get("addBook")
             .then((templateHtml) => {
                 let templateFunc = handlebars.compile(templateHtml);
@@ -295,18 +306,131 @@ let controllers = {
                         name: $("#tb-name").val(),
                         img: $("#tb-img").val(),
                         price: $("#tb-price").val(),
-                        category: $("#tb-name").val(),
-                        author: $("#tb-category").val(),
+                        category: $("#tb-category").val(),
+                        author: $("#tb-author").val(),
                         pages: $("#tb-pages").val(),
                         cover: $("#tb-cover").val(),
-                        summary: $("#tb-summary").val(),
+                        summary: $("#tb-summary").val()
                     };
 
-                    dataService.addBook(book)
-                        .then((respUser) => {
-                            document.location = "#/home";
-                        });
+                    dataService.addBook(book);
+                            document.location = "#/products/books";
 
+                    ev.preventDefault();
+                    return false;
+                });
+
+            });
+    },
+    addMagazine: () => {
+        templates.get("addMagazine")
+            .then((templateHtml) => {
+                let templateFunc = handlebars.compile(templateHtml);
+                let html = templateFunc();
+
+                $("#main").html(html);
+
+                $("#btn-add").on("click", (ev) => {
+                    let magazine = {
+                        name: $("#tb-name").val(),
+                        img: $("#tb-img").val(),
+                        price: $("#tb-price").val(),
+                        category: $("#tb-category").val(),
+                          author: $("#tb-author").val(),
+                        theme: $("#tb-theme").val(),
+                        pages: $("#tb-pages").val()
+                    };
+
+                    dataService.addMagazine(magazine);
+                            document.location = "#/products/magazines";
+
+
+                    ev.preventDefault();
+                    return false;
+                });
+
+            });
+    },
+    addComic: () => {
+        templates.get("addComic")
+            .then((templateHtml) => {
+                let templateFunc = handlebars.compile(templateHtml);
+                let html = templateFunc();
+
+                $("#main").html(html);
+
+                $("#btn-add").on("click", (ev) => {
+                    let comic = {
+                        name: $("#tb-name").val(),
+                        img: $("#tb-img").val(),
+                        price: $("#tb-price").val(),
+                        category: $("#tb-category").val(),
+                        author: $("#tb-author").val(),
+                        pages: $("#tb-pages").val(),
+                        superheroName: $("#tb-superheroName").val(),
+                        publisher: $("#tb-publisher").val()
+                    };
+
+                    dataService.addComic(comic);
+                            document.location = "#/products/comics";
+
+                    ev.preventDefault();
+                    return false;
+                });
+
+            });
+    },
+    addCd: () => {
+        templates.get("addCd")
+            .then((templateHtml) => {
+                let templateFunc = handlebars.compile(templateHtml);
+                let html = templateFunc();
+
+                $("#main").html(html);
+
+                $("#btn-add").on("click", (ev) => {
+                    let cd = {
+                        name: $("#tb-name").val(),
+                        img: $("#tb-img").val(),
+                        price: $("#tb-price").val(),
+                        category: $("#tb-category").val(),
+                        raiting: $("#tb-raiting").val(),
+                        duration: $("#tb-duration").val(),
+                        artist: $("#tb-artist").val(),
+                        songCount: $("#tb-songCount").val()
+                    };
+
+                    dataService.addCd(cd);
+                            document.location = "#/products/cds";
+
+                    ev.preventDefault();
+                    return false;
+                });
+
+            });
+    },
+    addDvd: () => {
+        templates.get("addDvd")
+            .then((templateHtml) => {
+                let templateFunc = handlebars.compile(templateHtml);
+                let html = templateFunc();
+
+                $("#main").html(html);
+
+                $("#btn-add").on("click", (ev) => {
+                    let dvd = {
+                        name: $("#tb-name").val(),
+                        img: $("#tb-img").val(),
+                        price: $("#tb-price").val(),
+                        category: $("#tb-category").val(),
+                        raiting: $("#tb-raiting").val(),
+                        duration: $("#tb-duration").val(),
+                        summary: $("#tb-summary").val(),
+                        premiereYear: $("#tb-premiereYear").val()
+                    };
+
+                    dataService.addDvd(dvd);
+                    document.location = "#/products/dvds";
                     ev.preventDefault();
                     return false;
                 });

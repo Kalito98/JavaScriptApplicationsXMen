@@ -15,20 +15,40 @@
       {
         "id": 2,
         "name": "Star Wars: The Force Awakens",
-          "img":"http://vignette1.wikia.nocookie.net/starwars/images/1/14/SWTheForceAwakensStruzanD23Poster.png/revision/latest?cb=20150828185734",
+        "img": "http://vignette1.wikia.nocookie.net/starwars/images/1/14/SWTheForceAwakensStruzanD23Poster.png/revision/latest?cb=20150828185734",
         "price": 44,
         "category": "adventure",
         "rating": 8.2,
         "duration": 138,
         "summary": "Three decades after the defeat of the Galactic Empire, a new threat arises. The First Order attempts to rule the galaxy and only a ragtag group of heroes can stop them, along with the help of the Resistance.",
         "premiereYear": 2015
+      },
+      {
+        "name": "dfgf",
+        "img": "dfgdf",
+        "price": "56546",
+        "category": "gdfgdf",
+        "duration": "56",
+        "summary": "dghdgh",
+        "premiereYear": "56",
+        "id": 1
+      },
+      {
+        "name": "dfgf",
+        "img": "dfgfd",
+        "price": "45",
+        "category": "dfg",
+        "duration": "345",
+        "summary": "gdfgfg",
+        "premiereYear": "454",
+        "id": 2
       }
     ],
     "cds": [
       {
         "id": 3,
         "name": "Recovery",
-          "img":"https://s-media-cache-ak0.pinimg.com/236x/76/41/59/764159a8dcc0cd0f1507644f19865f5e.jpg",
+        "img": "https://s-media-cache-ak0.pinimg.com/236x/76/41/59/764159a8dcc0cd0f1507644f19865f5e.jpg",
         "price": 22,
         "category": "hip hop",
         "rating": 10,
@@ -39,7 +59,7 @@
       {
         "id": 4,
         "name": "Anti",
-          "img":"https://upload.wikimedia.org/wikipedia/en/3/32/Rihanna_-_Anti.png",
+        "img": "https://upload.wikimedia.org/wikipedia/en/3/32/Rihanna_-_Anti.png",
         "price": 14,
         "category": "pop",
         "rating": 4.8,
@@ -63,44 +83,75 @@
       {
         "id": 6,
         "name": "Harry Potter and the Goblet of Fire",
-          "img":"https://upload.wikimedia.org/wikipedia/en/6/62/Harry_Potter_and_the_Goblet_of_Fire_(US_cover).jpg",
+        "img": "https://upload.wikimedia.org/wikipedia/en/6/62/Harry_Potter_and_the_Goblet_of_Fire_(US_cover).jpg",
         "price": 20,
         "category": "fantasy",
         "author": "J. K. Rowling",
         "pages": 636,
         "cover": "soft",
         "summary": "Harry Potter and the Goblet of Fire is the fourth novel in the Harry Potter series, written by British author J. K. Rowling. It follows Harry Potter, a wizard in his fourth year at Hogwarts School of Witchcraft and Wizardry and the mystery surrounding the entry of Harry's name into the Triwizard Tournament, in which he is forced to compete."
+      },
+      {
+        "name": "SUMMER DAYS AND SUMMER NIGHTS",
+        "img": "http://d2arxad8u2l0g7.cloudfront.net/books/1443125284l/25063781.jpg",
+        "price": "17",
+        "category": "romance",
+        "author": "STEPHANIE PERKINS",
+        "pages": "471",
+        "cover": "soft",
+        "summary": "Maybe it's the long, lazy days, or maybe it's the heat making everyone a little bit crazy. Whatever the reason, summer is the perfect time for love to bloom. Summer Days and Summer Nights: Twelve Love Stories, written by twelve bestselling young adult writers and edited by international bestselling author Stephanie Perkins, will have you dreaming of sunset strolls by the lake. So set out your beach chair and grab your sunglasses. You have twelve reasons this summer to soak up the sun and fall in love.",
+        "id": 1
+      },
+      {
+        "name": "dfgf",
+        "img": "dfgf",
+        "price": "45",
+        "category": "fdgf",
+        "author": "dfgf",
+        "pages": "54",
+        "cover": "fgdf",
+        "summary": "dfgfd",
+        "id": 3
+      },
+      {
+        "name": "dfgf",
+        "img": "dfgf",
+        "price": "45",
+        "category": "fdgf",
+        "author": "dfgf",
+        "pages": "54",
+        "cover": "fgdf",
+        "summary": "dfgfd",
+        "id": 4
       }
     ],
     "magazines": [
       {
         "id": 7,
         "name": "Time",
-          "img":"https://65.media.tumblr.com/67fdcf57d9e42978ae2dbf9b7f7957ff/tumblr_mmlzvmaFtL1s9ahd8o2_1280.jpg",
+        "img": "https://65.media.tumblr.com/67fdcf57d9e42978ae2dbf9b7f7957ff/tumblr_mmlzvmaFtL1s9ahd8o2_1280.jpg",
         "price": 6,
         "category": "news",
         "author": "Nancy Gibbs",
         "theme": "identity of modern hero",
-        "pages": 100,
-        "present": null
+        "pages": 100
       },
       {
         "id": 8,
         "name": "National Geographic",
-          "img":"http://ngm.nationalgeographic.com/covers/img/ngm-1985-jun-714.jpg",
+        "img": "http://ngm.nationalgeographic.com/covers/img/ngm-1985-jun-714.jpg",
         "price": 10,
         "category": "nature",
         "author": "Susan Goldberg",
         "pages": 123,
-        "theme": "june 1985",
-        "present": 1
+        "theme": "june 1985"
       }
     ],
     "comics": [
       {
         "id": 9,
         "name": "X-Men: Legacy",
-          "img":"http://1.bp.blogspot.com/-ghBjPfiCICg/TmYXOeT33iI/AAAAAAAABi0/H59eo_qhaWQ/s1600/x-men-legacy-242.jpg",
+        "img": "http://1.bp.blogspot.com/-ghBjPfiCICg/TmYXOeT33iI/AAAAAAAABi0/H59eo_qhaWQ/s1600/x-men-legacy-242.jpg",
         "price": 14,
         "category": "superhero",
         "author": "Simon Spurrier",
@@ -111,7 +162,7 @@
       {
         "id": 10,
         "name": "The Amaizing Spider-man",
-          "img": "http://vignette1.wikia.nocookie.net/marveldatabase/images/c/cc/Amazing_Spider-Man_Vol_1_642_NYCC_Variant.jpg/revision/latest?cb=20101105183902",
+        "img": "http://vignette1.wikia.nocookie.net/marveldatabase/images/c/cc/Amazing_Spider-Man_Vol_1_642_NYCC_Variant.jpg/revision/latest?cb=20101105183902",
         "price": 14,
         "category": "superhero",
         "author": "Stan Lee",
