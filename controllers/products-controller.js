@@ -71,8 +71,7 @@ module.exports = function (db) {
         dvd.id = idGenerator.next().value;
 
         getProductsFromDB()['dvds']
-            .push(dvd)
-            .value();
+            .push(dvd);
     }
 
     function postCd(req, res) {
@@ -80,8 +79,7 @@ module.exports = function (db) {
         cd.id = idGenerator.next().value;
 
         getProductsFromDB()['cds']
-            .push(cd)
-            .value();
+            .push(cd);
     }
 
     function postMagazine(req, res) {
@@ -89,8 +87,7 @@ module.exports = function (db) {
         magazine.id = idGenerator.next().value;
 
         getProductsFromDB()['magazines']
-            .push(magazine)
-            .value();
+            .push(magazine);
     }
 
     function postBook(req, res) {
@@ -98,8 +95,7 @@ module.exports = function (db) {
         book.id = idGenerator.next().value;
 
         getProductsFromDB()['books']
-            .push(book)
-            .value();
+            .push(book);
     }
 
     function postComic(req, res) {
@@ -107,8 +103,7 @@ module.exports = function (db) {
         comic.id = idGenerator.next().value;
 
         getProductsFromDB()['comics']
-            .push(comic)
-            .value();
+            .push(comic);
     }
 
 
