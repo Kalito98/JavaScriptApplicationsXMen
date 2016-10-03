@@ -38,4 +38,4 @@ app.post("/api/products/dvds", productsController.post.postDvd);
 app.post("/api/products/magazines", productsController.post.postMagazine);
 
 let port = 3000;
-app.listen(port, () => console.log(`Server is running at http://localhost:${port}`));
+app.listen(process.env.PORT || port, () => console.log(`Server is running at http://localhost:${port}`));
