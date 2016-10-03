@@ -1,20 +1,15 @@
-# JavaScriptApplicationsXMen
+E-Library Single Page Application where you can find information about Books, Magazines, Comics, Movies and Albums.
 
-## Bookstore that sells books, dvd-s, comics, magazine.
-- Base class Item with Name, Price, Id, Category
-- Class Physical(sounds bad) that extends Item with Author, Pages
-- Class Digital that extends Items with Rating, Duration
-- Class Book that extends Physical with Cover, Summary
-- Class Magazine that extends Physical with Theme, HasPresent (boolean)
-- Class Comic that extends Physical with SuperheroName, Publisher
-- Class Dvd that extends Digital with MovieSummary, YearOfPremiere
-- Class Cd that extends Digital with Songs, SongsCount
+VIdeo : https://www.youtube.com/watch?v=09BiV2GdeeQ
 
+Every product has Title, Price, Id and Category.
 
-## TODO
-- Server for storing data
-- Templates for each data type
-- Basic UI
-- Module with request functions for getting data
-- Displaying the data
-- Tests
+Books, magazines and comics(which are phisical products) have Author and Number of Pages.While DVDs and CDs(or digital products) have Rating and Duration.
+
+Each Book also has Type of Cover and Summary. Magazines have Themes. Comics' features are Superhero Name and Publisher.
+
+Each DVD has Summary and Year of Premiere. CDs have Songs and Number of Songs.
+
+Users can login or register.
+
+When user is logged in they can add products.
