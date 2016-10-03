@@ -22,26 +22,6 @@
         "duration": 138,
         "summary": "Three decades after the defeat of the Galactic Empire, a new threat arises. The First Order attempts to rule the galaxy and only a ragtag group of heroes can stop them, along with the help of the Resistance.",
         "premiereYear": 2015
-      },
-      {
-        "name": "dfgf",
-        "img": "dfgdf",
-        "price": "56546",
-        "category": "gdfgdf",
-        "duration": "56",
-        "summary": "dghdgh",
-        "premiereYear": "56",
-        "id": 1
-      },
-      {
-        "name": "dfgf",
-        "img": "dfgfd",
-        "price": "45",
-        "category": "dfg",
-        "duration": "345",
-        "summary": "gdfgfg",
-        "premiereYear": "454",
-        "id": 2
       }
     ],
     "cds": [
@@ -101,28 +81,6 @@
         "cover": "soft",
         "summary": "Maybe it's the long, lazy days, or maybe it's the heat making everyone a little bit crazy. Whatever the reason, summer is the perfect time for love to bloom. Summer Days and Summer Nights: Twelve Love Stories, written by twelve bestselling young adult writers and edited by international bestselling author Stephanie Perkins, will have you dreaming of sunset strolls by the lake. So set out your beach chair and grab your sunglasses. You have twelve reasons this summer to soak up the sun and fall in love.",
         "id": 1
-      },
-      {
-        "name": "dfgf",
-        "img": "dfgf",
-        "price": "45",
-        "category": "fdgf",
-        "author": "dfgf",
-        "pages": "54",
-        "cover": "fgdf",
-        "summary": "dfgfd",
-        "id": 3
-      },
-      {
-        "name": "dfgf",
-        "img": "dfgf",
-        "price": "45",
-        "category": "fdgf",
-        "author": "dfgf",
-        "pages": "54",
-        "cover": "fgdf",
-        "summary": "dfgfd",
-        "id": 4
       }
     ],
     "magazines": [
