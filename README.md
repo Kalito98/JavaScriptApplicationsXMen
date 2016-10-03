@@ -1,15 +1,17 @@
-E-Library Single Page Application where you can find information about Books, Magazines, Comics, Movies and Albums.
+#XMen team E-Library 
 
-VIdeo : https://www.youtube.com/watch?v=09BiV2GdeeQ
+##Single Page Application where you can find information about Books, Magazines, Comics, Movies and Albums.
 
-Every product has Title, Price, Id and Category.
+-VIdeo : https://www.youtube.com/watch?v=09BiV2GdeeQ
 
-Books, magazines and comics(which are phisical products) have Author and Number of Pages.While DVDs and CDs(or digital products) have Rating and Duration.
+-Every product has Title, Price, Id and Category.
 
-Each Book also has Type of Cover and Summary. Magazines have Themes. Comics' features are Superhero Name and Publisher.
+-Books, magazines and comics(which are phisical products) have Author and Number of Pages.While DVDs and CDs(or digital products) have Rating and Duration.
 
-Each DVD has Summary and Year of Premiere. CDs have Songs and Number of Songs.
+-Each Book also has Type of Cover and Summary. Magazines have Themes. Comics' features are Superhero Name and Publisher.
 
-Users can login or register.
+-Each DVD has Summary and Year of Premiere. CDs have Songs and Number of Songs.
 
-When user is logged in they can add products.
+-Users can login or register.
+
+-When user is logged in they can add products.
